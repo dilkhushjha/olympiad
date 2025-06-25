@@ -1,3 +1,5 @@
+
+
 import React from "react";
 import Image from "next/image";
 import RegisterForm from "./_components/RegisterForm";
@@ -106,3 +108,4 @@ const Olympiad = () => {
 };
 
 export default Olympiad;
+

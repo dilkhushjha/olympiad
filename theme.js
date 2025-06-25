@@ -60,7 +60,8 @@ const theme = {
     '3xl': '3rem',
     '4xl': '4.5rem'
   },
-  fontFamily: { 'chopin': ['Chopin Trial', 'sans-serif'] },
+  // fontFamily: { 'chopin': ['Chopin Trial', 'sans-serif'] },
+  fontFamily: { 'Poppins': ['Poppins', 'sans-serif'] },
   boxShadow:
   {
     Sahdow: '-4px 4px 0px 0px rgba(0,0,0,1)',

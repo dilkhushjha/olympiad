@@ -4,7 +4,7 @@ import Faq from '@/components/Faq'
 import React, { useState } from 'react'
 import RegistrationProcessCard from './_components/RegistrationProcessCard'
 import ScholarshipPromoBanner from '@/components/ScholarshipPromoBanner'
-import ScholarshipForm from './_components/ScholarshipForm'
+import ScholarshipForm from './_components/GetOtpForm'
 import Link from 'next/link';
 import MsatRegistrationKeyModal from './_components/MsatRegistrationKeyModal'
 import Image from 'next/image';
