@@ -46,18 +46,31 @@ export default function TestimonialSection() {
       {/* Heading Section */}
       <div className="gap-4 my-6">
         <div>
-          <p className="text-md text-Secondary-Shade_2 font-semibold">
+          <p className="text-[22px] text-Secondary-Shade_2 font-semibold">
             Testimonials
           </p>
-          <h2 className="text-2xl font-bold mt-2">Hear From Our Students</h2>
+          <h2 className="text-[44px] font-bold mt-2">Hear From Our Students</h2>
         </div>
-        <div className="flex justify-between items-center my-10 mb-16">
-          <p className="text-sm font-normal text-Grey-Shade_1 mt-2 max-w-lg">
+        <div className="flex justify-between items-center my-6 mb-16">
+          <p className="text-md font-normal text-Grey-Shade_1 mt-2 max-w-lg">
             Kind words from our students who appeared in Matrix Olympiad and
             secured a good rank in various colleges
           </p>
-          <button className="bg-Primary-Shade_1 hover:bg-green-600 text-white font-semibold px-6 py-2 mx-16 rounded-full text-sm">
-            Register Now &nbsp; &gt;
+          <button className="flex gap-3 items-center *:text-white font-semibold btn-secondary text-lg">
+            Register Now <svg
+              width="7"
+              height="12"
+              viewBox="0 0 7 12"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1 10.5L5.5 6L1 1.5"
+                stroke="white"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+              />
+            </svg>
           </button>
         </div>
       </div>
@@ -105,7 +118,7 @@ export default function TestimonialSection() {
           ))}
         </Swiper>
       </div>
-      <div className="custom-swiper-pagination mt-4 flex justify-start gap-2" />
+      <div className="custom-swiper-pagination mt-4 flex justify-start gap-[8px] hover:cursor-pointer" />
     </div>
   );
 }

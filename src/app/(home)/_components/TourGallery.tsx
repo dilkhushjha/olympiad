@@ -21,12 +21,12 @@ export default function TourGallery() {
       <div className="container">
         <div className="my-12 py-4 flex flex-col justify-center">
           <div>
-            <h2 className="font-bold text-2xl text-center leading-normal">
+            <h2 className="font-bold text-[44px] text-center leading-[1.2]">
               Singapore’s
               <br /> Educational Tour Gallery
             </h2>
           </div>
-          <div className="flex flex-col md:flex-row items-center m-4 my-8 gap-6">
+          <div className="flex flex-col md:flex-row items-center m-4 my-10 gap-6">
             <div className="relative w-full sm:w-auto">
               <Image
                 src="images/olympiad/gallery/Gallery1.png"
@@ -44,14 +44,14 @@ export default function TourGallery() {
                 View All (20)
               </div>
             </div>
-            <div className="flex md:flex-col sm:flex-row sm:w-auto w-full gap-8">
+            <div className="flex md:flex-col sm:flex-row sm:w-auto w-full gap-6">
               <div>
                 <Image
                   src="images/olympiad/gallery/Gallery2.png"
                   alt="gallery"
                   width={372}
-                  height={170}
-                  //   className="w-full h-auto sm:w-[160px] sm:h-[300px]"
+                  height={180}
+                  className="h-[160px]"
                 />
               </div>
               <div>
@@ -59,8 +59,8 @@ export default function TourGallery() {
                   src="images/olympiad/gallery/Gallery3.png"
                   alt="gallery"
                   width={372}
-                  height={170}
-                  //   className="w-full h-auto sm:w-[160px] sm:h-[300px]"
+                  height={180}
+                  className="h-[160px]"
                 />
               </div>
             </div>

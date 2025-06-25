@@ -1,27 +1,28 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 export default function RewardsAndRecognition() {
   return (
     <section className="bg-Accent-Red_4 spacing-xy">
-      <div className="container flex flex-col gap-8 justify-center items-center p-8">
-        <div className="flex flex-col items-center md:w-1/3">
-          <h3 className="text-[#1A64C6] font-semibold m-2">
+      <div className="container flex flex-col gap-8 justify-center items-center ">
+        <div className="flex flex-col items-center ">
+          <h3 className="text-Secondary-Shade_2 text-[20px] font-semibold mb-2">
             Rewards & Recognition
           </h3>
-          <h2 className="text-2xl font-bold flex text-center">
-            Key Benefits for Students & Parents
+          <h2 className="text-3xl font-bold flex text-center">
+            Key Benefits for Students <br /> & Parents
           </h2>
         </div>
         <div className="flex flex-col items-center">
           <div className="grid sm:grid-cols-1 md:grid-cols-2 items-center lg:grid-cols-3 gap-5 w-full">
-            <div className="bg-[url('/images/olympiad/bggrid1.png')] bg-contain bg-no-repeat bg-center flex flex-col items-center p-4 w-[376px] h-[376px]">
+            <div className="bg-[url('/images/olympiad/bggrid1.png')] bg-contain bg-no-repeat justify-center bg-center flex flex-col items-center p-4 w-[376px] h-[376px]">
               <Image
                 src="images/olympiad/grid1.png"
-                className="m-2"
+                className=""
                 alt="grad1"
-                width={110}
-                height={130}
+                width={120}
+                height={140}
               />
               <div className="flex flex-col items-center text-center w-10/12 text-white">
                 <h2 className="text-xl font-bold my-4 w-4/5 ">
@@ -36,17 +37,17 @@ export default function RewardsAndRecognition() {
               </div>
             </div>
 
-            <div className="bg-[url('/images/olympiad/bggrid2.png')] bg-contain bg-no-repeat bg-center flex flex-col items-center p-4 w-[376px] h-[376px]">
+            <div className="bg-[url('/images/olympiad/bggrid2.png')] bg-contain justify-center bg-no-repeat bg-center flex flex-col items-center p-4 w-[376px] h-[376px]">
               <Image
                 src="images/olympiad/grid2.png"
-                className="m-2"
+                className=""
                 alt="grad1"
-                width={110}
-                height={130}
+                width={140}
+                height={140}
               />
-              <div className="flex flex-col items-center text-center w-10/12 text-white">
+              <div className="flex flex-col items-center text-center w-10/12 text-white ">
                 <h2 className="text-xl font-bold my-4 ">
-                  In-Depth Performance Analysis
+                  In-Depth <br />Performance Analysis
                 </h2>
                 <p className="m-2">
                   Gain a <span className="font-semibold">detailed report</span>{" "}
@@ -63,11 +64,11 @@ export default function RewardsAndRecognition() {
                 src="images/olympiad/grid3.png"
                 className="m-2"
                 alt="grad1"
-                width={110}
-                height={130}
+                width={115}
+                height={140}
               />
               <div className="flex flex-col items-center text-center w-10/12 text-white">
-                <h2 className="text-xl font-bold my-4 ">Cash Rewards</h2>
+                <h2 className="text-xl font-bold my-4 ">Cash <br /> Rewards</h2>
                 <p className="m-2">
                   A massive <span className="font-semibold">₹31 Lakhs</span> in
                   cash prizes awaits top achievers across various categories.
@@ -78,14 +79,14 @@ export default function RewardsAndRecognition() {
             <div className="bg-[url('/images/olympiad/bggrid4.png')] bg-contain bg-no-repeat bg-center flex flex-col items-center p-4 w-[376px] h-[376px]">
               <Image
                 src="images/olympiad/grid4.png"
-                className="m-2"
+                className=""
                 alt="grad1"
-                width={110}
+                width={140}
                 height={130}
               />
               <div className="flex flex-col items-center text-center w-10/12 text-white">
                 <h2 className="text-xl font-bold my-4 ">
-                  Free International Tour
+                  Free <br />International Tour
                 </h2>
                 <p className="m-2">
                   The <span className="font-semibold">top 8</span> overall
@@ -101,8 +102,8 @@ export default function RewardsAndRecognition() {
                 src="images/olympiad/grid5.png"
                 className="m-2"
                 alt="grad1"
-                width={110}
-                height={130}
+                width={80}
+                height={100}
               />
               <div className="flex flex-col items-center text-center w-10/12 text-white">
                 <h2 className="text-xl font-bold w-3/5 my-4 ">
@@ -150,16 +151,20 @@ export default function RewardsAndRecognition() {
                 </svg>
               </div>
 
-              <div className="flex flex-col items-center text-center w-10/12 text-white">
-                <h2 className="text-2xl font-bold my-4 w-4/5 ">
-                  Register Now For Free
-                </h2>
-                <p className="text-2xl">&#8594;</p>
-              </div>
+              <Link href="#">
+                <div className="group flex flex-col items-center text-center w-10/12 text-white mx-auto">
+                  <h2 className="text-2xl font-bold my-4 w-4/5">
+                    Register Now For Free
+                  </h2>
+                  <p className="text-2xl transform transition-transform duration-500 ease-in-out group-hover:translate-x-1">
+                    &#8594;
+                  </p>
+                </div>
+              </Link>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </section >
   );
 }
