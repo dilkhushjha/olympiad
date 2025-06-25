@@ -1,34 +1,186 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
-import { useRouter } from "next/navigation";
+
 import React, { useState } from "react";
 import Image from 'next/image';
+import OtpVerifiedSuccessfully from "./OtpVerifiedSuccessfully";
 
+const otpData = [1, 2, 3, 4, 5, 7];
 
 const RegisterForm: React.FC = () => {
-    const router = useRouter();
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+
+    // const router = useRouter();
     const [formData, setFormData] = useState({
         mobileNo: "",
 
     });
 
-    const handleFormData = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    const [isSubmitted, setIsSubmitted] = useState(false);
+    const [step, setStep] = useState(1);
+    const [otp, setOtp] = useState({
+        otp_1: "",
+        otp_2: "",
+        otp_3: "",
+        otp_4: "",
+        otp_5: "",
+        otp_6: "",
+    });
+
+
+
+    const handleChange = (
+        e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+    ) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
-        console.log(formData);
-
-        // Convert form data to query string
-        const queryString = new URLSearchParams(formData as any).toString();
-
-        // Redirect with query parameters
-        // router.push(`/jee-advanced-rank-predictor/rank?${queryString}`);
+    const handleOtpValidation = (
+        e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+    ) => {
+        setOtp({ ...otp, [e.target.name]: e.target.value });
     };
+
+    const handleOtpSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        const isOtpMatching = otpData.every(
+            (num, index) => num === Number(otp[`otp_${index + 1}`])
+        );
+        if (isOtpMatching) {
+            console.log("OTP Matching");
+            setStep(3); // Move to Success Message
+        } else {
+            alert("OTP Mismatch! Please try again.");
+        }
+    };
+
+    const handleCloseModal = () => {
+        setIsSubmitted(false); // Hide modal
+    };
+
+    const handleSubmit = (e: React.FormEvent) => {
+        e.preventDefault();
+        setIsSubmitted(true);
+        setStep(2);
+    };
+
 
     return (
         <div>
+            {isSubmitted && step === 2 && (
+                <div className="fixed inset-0 bg-gray-900 bg-opacity-50 rounded-3xl flex justify-center items-center z-50">
+                    <div className="bg-white w-max rounded-3xl shadow-lg z-999">
+                        <div className=" px-12 py-10 flex flex-col items-center justify-center rounded-3xl text-center gap-6 relative bg-white">
+
+                            <button
+                                onClick={handleCloseModal}
+                                className="absolute top-4 right-4 text-2xl px-2 rounded text-gray-500 hover:text-red-500"
+                            >
+                                ×
+                            </button>
+
+
+                            <Image src={'/images/olympiad/otp-image.png'} width={120} height={120}></Image>
+
+                            <form
+                                onSubmit={handleOtpSubmit}
+                                className="space-y-4 flex flex-col text-black"
+                            >
+                                <div className="flex flex-col gap-5">
+                                    <h2 className="text-2xl  text-black">
+                                        Please Enter OTP <br />
+                                        Received on <strong>'+91&nbsp;{formData.mobileNo}'
+                                        </strong>
+                                    </h2>
+                                    <div className="flex flex-col gap-2 w-[460px]">
+                                        <p className="text-sm text-Grey-Shade_1 text-left">
+                                            Enter OTP
+                                        </p>
+                                        <div className="flex gap-2 text-black">
+                                            <div className="flex basis-1/6">
+                                                <input
+                                                    name="otp_1"
+                                                    type="text"
+                                                    maxLength={1}
+                                                    value={otp["otp_1"]}
+                                                    onChange={handleOtpValidation}
+                                                    className="border-2 px-6 py-4 font-bold rounded-xl w-[100%]"
+                                                ></input>
+                                            </div>
+                                            <div className="flex basis-1/6">
+                                                <input
+                                                    name="otp_2"
+                                                    type="text"
+                                                    maxLength={1}
+                                                    value={otp["otp_2"]}
+                                                    onChange={handleOtpValidation}
+                                                    className="border-2 px-6 py-4 font-bold rounded-xl w-[100%]"
+                                                ></input>
+                                            </div>
+                                            <div className="flex basis-1/6">
+                                                <input
+                                                    name="otp_3"
+                                                    type="text"
+                                                    maxLength={1}
+                                                    value={otp["otp_3"]}
+                                                    onChange={handleOtpValidation}
+                                                    className="border-2 px-6 py-4 font-bold rounded-xl w-[100%]"
+                                                ></input>
+                                            </div>
+                                            <div className="flex basis-1/6">
+                                                <input
+                                                    name="otp_4"
+                                                    type="text"
+                                                    maxLength={1}
+                                                    value={otp["otp_4"]}
+                                                    onChange={handleOtpValidation}
+                                                    className="border-2 px-6 py-4 font-bold rounded-xl w-[100%]"
+                                                ></input>
+                                            </div>
+                                            <div className="flex basis-1/6">
+                                                <input
+                                                    name="otp_5"
+                                                    type="text"
+                                                    maxLength={1}
+                                                    value={otp["otp_5"]}
+                                                    onChange={handleOtpValidation}
+                                                    className="border-2 px-6 py-4 font-bold rounded-xl w-[100%]"
+                                                ></input>
+                                            </div>
+                                            <div className="flex basis-1/6">
+                                                <input
+                                                    name="otp_6"
+                                                    type="text"
+                                                    maxLength={1}
+                                                    value={otp["otp_6"]}
+                                                    onChange={handleOtpValidation}
+                                                    className="border-2 px-6 py-4 font-bold rounded-xl w-[100%] text-black"
+                                                ></input>
+                                            </div>
+                                        </div>
+                                        <p className="text-sm text-left">
+                                            You can resend OTP in 30 seconds
+                                        </p>
+                                    </div>
+                                </div>
+                                <div className="pt-4">
+                                    <button
+                                        type="submit"
+                                        className="w-max bg-Primary-Shade_1 text-white py-3 px-6 rounded-full font-semibold hover:bg-green-700 transition text-lg"
+                                    >
+                                        Verify OTP ›
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            )}
+
+            {isSubmitted && step == 3 && (
+                <OtpVerifiedSuccessfully onClose={handleCloseModal} />
+            )}
             <div className="col w-full flex">
                 <div className="bg-white p-8 rounded-3xl w-full max-w-[480px] flex flex-col gap-4">
                     <div className="
@@ -72,7 +224,7 @@ const RegisterForm: React.FC = () => {
                                 <input
                                     name="mobileNo"
                                     type="tel"
-                                    onChange={handleFormData}
+                                    onChange={handleChange}
                                     value={formData.mobileNo}
                                     placeholder="Enter your mobile no"
                                     className="flex-1 bg-transparent outline-none text-gray-700 placeholder-gray-400"
@@ -82,7 +234,7 @@ const RegisterForm: React.FC = () => {
 
                         {/* Submit Button */}
                         <div className="mt-4">
-                            <button type="submit" className="btn-secondary w-full text-white rounded-full">
+                            <button type="submit" className="btn-secondary w-full text-white rounded-full" onClick={handleSubmit}>
                                 GET OTP
                             </button>
                         </div>
