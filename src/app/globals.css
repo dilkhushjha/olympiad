@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -10,85 +10,85 @@
 
 /* -------------------- Font Face Declarations -------------------- */
 @font-face {
-  font-family: 'Chopin Trial';
-  src: url('/fonts/Chopin-Trial-Regular.otf') format('opentype');
+  font-family: "Chopin Trial";
+  src: url("/fonts/Chopin-Trial-Regular.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Chopin Trial';
-  src: url('/fonts/Chopin-Trial-RegularItalic.otf') format('opentype');
+  font-family: "Chopin Trial";
+  src: url("/fonts/Chopin-Trial-RegularItalic.otf") format("opentype");
   font-weight: 400;
   font-style: italic;
 }
 
 @font-face {
-  font-family: 'Chopin Trial';
-  src: url('/fonts/Chopin-Trial-Bold.otf') format('opentype');
+  font-family: "Chopin Trial";
+  src: url("/fonts/Chopin-Trial-Bold.otf") format("opentype");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Chopin Trial';
-  src: url('/fonts/Chopin-Trial-BoldItalic.otf') format('opentype');
+  font-family: "Chopin Trial";
+  src: url("/fonts/Chopin-Trial-BoldItalic.otf") format("opentype");
   font-weight: 700;
   font-style: italic;
 }
 
 @font-face {
-  font-family: 'Chopin Trial';
-  src: url('/fonts/Chopin-Trial-Medium.otf') format('opentype');
+  font-family: "Chopin Trial";
+  src: url("/fonts/Chopin-Trial-Medium.otf") format("opentype");
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Chopin Trial';
-  src: url('/fonts/Chopin-Trial-MediumItalic.otf') format('opentype');
+  font-family: "Chopin Trial";
+  src: url("/fonts/Chopin-Trial-MediumItalic.otf") format("opentype");
   font-weight: 500;
   font-style: italic;
 }
 
 @font-face {
-  font-family: 'Chopin Trial';
-  src: url('/fonts/Chopin-Trial-Light.otf') format('opentype');
+  font-family: "Chopin Trial";
+  src: url("/fonts/Chopin-Trial-Light.otf") format("opentype");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Chopin Trial';
-  src: url('/fonts/Chopin-Trial-LightItalic.otf') format('opentype');
+  font-family: "Chopin Trial";
+  src: url("/fonts/Chopin-Trial-LightItalic.otf") format("opentype");
   font-weight: 300;
   font-style: italic;
 }
 
 @font-face {
-  font-family: 'Chopin Trial';
-  src: url('/fonts/Chopin-Trial-ExtraBold.otf') format('opentype');
+  font-family: "Chopin Trial";
+  src: url("/fonts/Chopin-Trial-ExtraBold.otf") format("opentype");
   font-weight: 800;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Chopin Trial';
-  src: url('/fonts/Chopin-Trial-ExtraBoldItalic.otf') format('opentype');
+  font-family: "Chopin Trial";
+  src: url("/fonts/Chopin-Trial-ExtraBoldItalic.otf") format("opentype");
   font-weight: 800;
   font-style: italic;
 }
 
 @font-face {
-  font-family: 'Chopin Trial';
-  src: url('/fonts/Chopin-Trial-Thin.otf') format('opentype');
+  font-family: "Chopin Trial";
+  src: url("/fonts/Chopin-Trial-Thin.otf") format("opentype");
   font-weight: 100;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Chopin Trial';
-  src: url('/fonts/Chopin-Trial-ThinItalic.otf') format('opentype');
+  font-family: "Chopin Trial";
+  src: url("/fonts/Chopin-Trial-ThinItalic.otf") format("opentype");
   font-weight: 100;
   font-style: italic;
 }
@@ -120,7 +120,7 @@ html {
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 14px;
   font-weight: 500;
   scroll-behavior: smooth;
@@ -205,10 +205,9 @@ h6 {
     max-width: max-content;
   }
 
-
   .filter-selected-pill {
     @apply flex justify-center items-center gap-2.5 border border-[color:var(--Grey-Shade-1, #718298)] [background:var(--Grey-Sahde-4, #EDEFF2)] p-2 rounded-lg border-solid text-[#718298] text-center text-sm font-bold capitalize;
-    font-family: 'Chopin Trial', sans-serif;
+    font-family: "Chopin Trial", sans-serif;
   }
 
   .header-swiper-pagination :not(.swiper-pagination-bullet-active) {
@@ -225,7 +224,7 @@ h6 {
 
   .title-1 {
     @apply text-[#101823] text-[32px] font-bold leading-[120%];
-    font-family: 'Chopin Trial', sans-serif;
+    font-family: "Chopin Trial", sans-serif;
   }
 
   .heading-2 {
@@ -234,24 +233,24 @@ h6 {
 
   .heading-3 {
     @apply text-[32px] font-bold leading-[120%] mb-4;
-    font-family: 'Chopin Trial', sans-serif;
+    font-family: "Chopin Trial", sans-serif;
   }
 
   .heading-4 {
     @apply text-[24px] font-bold leading-[120%] mb-4;
-    font-family: 'Chopin Trial', sans-serif;
+    font-family: "Chopin Trial", sans-serif;
   }
 
   .form-control {
     @apply space-y-2 relative;
   }
 
-  .form-control>label {
+  .form-control > label {
     @apply text-sm text-Grey-Shade_1 leading-snug;
   }
 
-  .form-control>input,
-  .form-control>select {
+  .form-control > input,
+  .form-control > select {
     @apply py-5 px-4 border border-Grey-Shade_3 rounded-lg text-Grey-Shade_1 font-medium text-sm leading-snug appearance-none focus:border-Black focus:outline-none;
   }
 }

@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import OtpVerificationModal from "./OtpVerificationModal";
 import RegisterForm from "./RegisterForm";
 
-const formText = ''
+const formText = "";
 
 const NextChampion = () => {
   const [formData, setFormData] = useState({
@@ -43,7 +43,7 @@ const NextChampion = () => {
         {/* Right Card */}
         <div>
           <div className="col w-full flex">
-            <RegisterForm />
+            <RegisterForm studentFeedBack={false} />
           </div>
         </div>
       </section>
