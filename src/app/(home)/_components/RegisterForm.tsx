@@ -233,7 +233,7 @@ const RegisterForm = (props) => {
             )}
 
             <div className="">
-                <div className="bg-white p-8 rounded-3xl w-[480px] flex flex-col gap-4 hover:shadow-lg hover:-translate-y-1  transition-all duration-500 ease-in-out">
+                <div className="bg-white p-8 rounded-3xl max-w-[480px] flex flex-col gap-4 hover:shadow-lg hover:-translate-y-1  transition-all duration-500 ease-in-out">
                     <div className="flex flex-col gap-4">
                         <h1 className="text-xl font-bold  text-gray-800">Register Now</h1>
                         <div className="flex flex-row gap-4 items-center">

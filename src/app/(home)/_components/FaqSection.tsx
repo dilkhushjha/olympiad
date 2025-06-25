@@ -58,9 +58,8 @@ export default function FaqSection() {
                 className="rounded-none border-b border-Grey-Shade_3 not:first:border-none"
               >
                 <div
-                  className={`cursor-pointer flex items-center justify-between my-4 ${
-                    openIdx === index ? "text-[#02824F]" : "text-[#101823]"
-                  }`}
+                  className={`cursor-pointer flex items-center justify-between my-5 ${openIdx === index ? "text-[#02824F]" : "text-[#101823]"
+                    }`}
                   onClick={() => handleFAQClick(index)}
                 >
                   <div className="text-lg font-semibold">{item.question}</div>

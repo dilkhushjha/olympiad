@@ -67,31 +67,31 @@ export default function TopNav() {
                         )}
                     </Link>
                     <ul className="md:flex gap-12 text-white mr-4 h-full hidden font-semibold ">
-                        <Li href="#about">
+                        <Li href="/#about">
 
                             <div tabIndex={0} role="button" className="">
                                 About
                             </div>
                         </Li>
-                        <Li href="#process">
+                        <Li href="/#process">
 
                             <div tabIndex={0} role="button" className="">
                                 Process
                             </div>
                         </Li>
-                        <Li href="#rewards">
+                        <Li href="/#rewards">
 
                             <div tabIndex={0} role="button" className="">
                                 Rewards
                             </div>
                         </Li>
-                        <Li href="#testimonials">
+                        <Li href="/#testimonials">
 
                             <div tabIndex={0} role="button" className="">
                                 Testimonials
                             </div>
                         </Li>
-                        <Li href="#faqs">
+                        <Li href="/#faqs">
 
                             <div tabIndex={0} role="button" className="">
                                 FAQs
@@ -104,7 +104,9 @@ export default function TopNav() {
 
                         <div className="md:block hidden text-Primary-Shade_1">
                             <h6>TALK TO US</h6>
-                            <p className="font-semibold">+91-01572 241911</p>
+                            <Link href="tel:+9101572241911">
+                                <p className="font-semibold">+91-01572 241911</p>
+                            </Link>
                         </div>
                         <div className="md:hidden gap-6 block ml-4">
                             <MobileNav checkForFixedNav={checkForFixedNav} />

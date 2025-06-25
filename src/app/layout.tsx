@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Matrix Edu: Impulse Course for Excellence",
-  description: "Embark on brilliance with 'Impulse,' a 1-year Integrated Foundation Program for JEE Main & Advanced. Elevate from 11th to 12th seamlessly. Join for academic excellence!",
+  title: "Matrix Olympiad",
+  description: "High-Impact Olympiad Exam for JEE, NEET, CLAT,NDA, Boards & Olympiad",
   icons: {
     apple: "/favicon.png",
     icon: "/favicon.png",

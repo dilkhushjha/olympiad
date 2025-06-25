@@ -7,9 +7,9 @@ const Footer = () => {
   return (
     <>
       <footer className="bg-[#13488E] py-10 text-white ">
-        <div className="container flex mx-auto items-center justify-between">
+        <div className="container flex mx-auto items-center justify-between font-light">
           <div className="flex items-center">
-            <div className="border-r-2 pr-12">
+            <div className="border-r border-Grey-Shade_1 pr-12">
               <div className="flex gap-4">
                 <Image
                   src={"/images/olympiad/logo-white.png"}
@@ -38,7 +38,7 @@ const Footer = () => {
                   />
                 </svg>
 
-                <Link href="#">mof@matrixedu.in</Link>
+                <Link href="mailto:mof@matrixedu.in">mof@matrixedu.in</Link>
               </p>
               <p className="flex items-center gap-2">
                 <svg
@@ -55,7 +55,7 @@ const Footer = () => {
                     fill="white"
                   />
                 </svg>
-                <Link href="#">+91 1572 241911</Link>
+                <Link href="tel:+91 1572 241911">+91 1572 241911</Link>
               </p>
               <p className="flex items-center gap-2">
                 <svg
@@ -87,7 +87,7 @@ const Footer = () => {
                   </defs>
                 </svg>
 
-                <Link href="#">+91 8999241911</Link>
+                <Link href="tel:+91 8999241911">+91 8999241911</Link>
               </p>
             </div>
           </div>
@@ -99,7 +99,7 @@ const Footer = () => {
                 e.preventDefault(); // prevent the default anchor behavior
                 window.scrollTo({ top: 0, behavior: "smooth" }); // scroll to top smoothly
               }}
-              className="flex justify-end"
+              className="flex mx-auto mr-0 w-max hover:shadow-lg transition-all ease-in-out rounded-full  bg-Primary-Shade_3 hover:bg-Primary-Shade_2 hover:translate-y-1"
             >
               <svg
                 width="40"
@@ -113,7 +113,7 @@ const Footer = () => {
                   width="40"
                   height="40"
                   rx="20"
-                  fill="#04DC86"
+                  fill=""
                 />
                 <path
                   d="M15 23.8164L20.5 18.3164L26 23.8164"
@@ -123,7 +123,7 @@ const Footer = () => {
                 />
               </svg>
             </Link>
-            <p className="text-gray-500">
+            <p className="text-Grey-Shade_3 text-sm font-light">
               © 2024 Matrix Olympiad All rights reserved
             </p>
           </div>
