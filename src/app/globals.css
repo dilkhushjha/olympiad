@@ -1,8 +1,14 @@
-/* @import './fonts.css'; */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* -------------------- Font Face Declarations -------------------- */
 @font-face {
   font-family: 'Chopin Trial';
   src: url('/fonts/Chopin-Trial-Regular.otf') format('opentype');
@@ -87,50 +93,54 @@
   font-style: italic;
 }
 
+/* -------------------- Root Colors -------------------- */
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
 
-/* @media (prefers-color-scheme: dark) {
+/* Optional Dark Theme
+@media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-} */
-html{
+}
+*/
+
+html {
   overflow-x: hidden;
 }
 
-*, html {
-
+*,
+html {
   scroll-behavior: smooth !important;
-
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: 'Chopin Trial', sans-serif;
-  /* overflow-x: hidden; */
+  font-family: 'Poppins', sans-serif;
   font-size: 14px;
   font-weight: 500;
-  /* max-width: 1337px;
-  margin: 0 auto; */
   scroll-behavior: smooth;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   @apply leading-[120%];
 }
-p, h6{
+
+p,
+h6 {
   @apply leading-[140%];
 }
 
 .container {
   @apply max-w-[1167px] w-full mx-auto px-4 md:px-0;
 }
-
 
 .bg-hero {
   background-image: url("/images/bg/Home_Hero.png");
@@ -144,44 +154,6 @@ p, h6{
   background-position: center;
 }
 
-.btn {
-  @apply !outline-none border-inherit hover:border-inherit;
-}
-
-.btn-primary {
-  @apply bg-white text-Primary-Shade_1 font-bold px-8 py-4 rounded-full cursor-pointer
-}
-
-.btn-secondary {
-  @apply bg-Primary-Shade_1 text-white font-bold px-8 py-4 rounded-full hover:!bg-Accent-Green_1 hover:!text-white transition-colors duration-300 cursor-pointer
-}
-
-.btn-rounded {
-  @apply rounded-full bg-Primary-Shade_1 cursor-pointer
-}
-
-.spacing-xy {
-  @apply py-[40px] md:py-[120px];
-}
-.spacing-b {
-  @apply pb-[40px] md:pb-[120px];
-}
-.spacing-t {
-  @apply pt-[40px] md:pt-[120px];
-}
-
-.pill {
-  @apply py-2 px-6 text-Grey-Shade_1 border border-Grey-Shade_3 rounded-full font-bold cursor-pointer;
-  max-width: max-content;
-}
-.pill.active{
-  @apply bg-Black text-white border-Black
-}
-
-.badge {
-  @apply py-1 px-2 text-Grey-Shade_3 border border-Grey-Shade_3 rounded-full font-bold box-content;
-  max-width: max-content;
-}
 .bg-neet {
   background-image: url("/images/bg/neet-rank-predictor-banner.png");
   background-size: cover;
@@ -189,53 +161,97 @@ p, h6{
   @apply bg-Primary-Shade_1;
 }
 
-.form-control{
-  @apply space-y-2 relative
-}
+/* -------------------- Custom Utilities Layer -------------------- */
+@layer utilities {
+  .btn {
+    @apply !outline-none border-inherit;
+  }
 
-.form-control > label {
-  @apply text-sm text-Grey-Shade_1 leading-snug;
-}
+  .btn-primary {
+    @apply bg-white text-Primary-Shade_1 font-bold px-8 py-4 rounded-full cursor-pointer;
+  }
 
-.form-control > input, .form-control > select {
-  @apply py-5 px-4 border border-Grey-Shade_3 rounded-lg text-Grey-Shade_1 font-medium text-sm leading-snug appearance-none focus:border-Black focus:outline-none;
+  .btn-secondary {
+    @apply bg-Primary-Shade_1 text-white font-bold px-8 py-4 rounded-full transition-colors duration-300 cursor-pointer;
+  }
 
-}
+  .btn-rounded {
+    @apply rounded-full bg-Primary-Shade_1 cursor-pointer;
+  }
 
-.dropdown-content span {
-  @apply hover:!bg-transparent hover:cursor-default
-}
+  .spacing-xy {
+    @apply py-[40px] md:py-[120px];
+  }
 
-.filter-selected-pill{
-  @apply flex justify-center items-center gap-2.5 border border-[color:var(--Grey-Shade-1,#718298)] [background:var(--Grey-Sahde-4,#EDEFF2)] p-2 rounded-lg border-solid  text-[#718298] text-center [font-family:Chopin-Trial] text-sm font-bold leading-[normal] capitalize
-}
+  .spacing-b {
+    @apply pb-[40px] md:pb-[120px];
+  }
+
+  .spacing-t {
+    @apply pt-[40px] md:pt-[120px];
+  }
+
+  .pill {
+    @apply py-2 px-6 text-Grey-Shade_1 border border-Grey-Shade_3 rounded-full font-bold cursor-pointer;
+    max-width: max-content;
+  }
+
+  .pill.active {
+    @apply bg-Black text-white border-Black;
+  }
+
+  .badge {
+    @apply py-1 px-2 text-Grey-Shade_3 border border-Grey-Shade_3 rounded-full font-bold box-content;
+    max-width: max-content;
+  }
 
 
-.header-swiper-pagination :not(.swiper-pagination-bullet-active){
-  @apply bg-white/60;
-}
-.header-swiper-pagination .swiper-pagination-bullet-active{
-  @apply bg-white;
-}
+  .filter-selected-pill {
+    @apply flex justify-center items-center gap-2.5 border border-[color:var(--Grey-Shade-1, #718298)] [background:var(--Grey-Sahde-4, #EDEFF2)] p-2 rounded-lg border-solid text-[#718298] text-center text-sm font-bold capitalize;
+    font-family: 'Chopin Trial', sans-serif;
+  }
 
-/*------------------- Heading Styles ------------------*/
+  .header-swiper-pagination :not(.swiper-pagination-bullet-active) {
+    @apply bg-white/60;
+  }
 
-.heading-1 {
-  @apply text-3xl font-bold leading-[120%]; 
-}
+  .header-swiper-pagination .swiper-pagination-bullet-active {
+    @apply bg-white;
+  }
 
-.title-1{
-  @apply text-[#101823] [font-family:Chopin-Trial] text-[32px] font-bold leading-[120%]
-}
+  .heading-1 {
+    @apply text-3xl font-bold leading-[120%];
+  }
 
-.heading-2{
-  @apply text-xl md:text-3xl font-bold;
-}
+  .title-1 {
+    @apply text-[#101823] text-[32px] font-bold leading-[120%];
+    font-family: 'Chopin Trial', sans-serif;
+  }
 
-.heading-3{
-  @apply [font-family:Chopin-Trial] text-[32px] font-bold leading-[120%] mb-4;
-}
+  .heading-2 {
+    @apply text-xl md:text-3xl font-bold;
+  }
 
-.heading-4{
-  @apply [font-family:Chopin-Trial] text-[24px] font-bold leading-[120%] mb-4;
+  .heading-3 {
+    @apply text-[32px] font-bold leading-[120%] mb-4;
+    font-family: 'Chopin Trial', sans-serif;
+  }
+
+  .heading-4 {
+    @apply text-[24px] font-bold leading-[120%] mb-4;
+    font-family: 'Chopin Trial', sans-serif;
+  }
+
+  .form-control {
+    @apply space-y-2 relative;
+  }
+
+  .form-control>label {
+    @apply text-sm text-Grey-Shade_1 leading-snug;
+  }
+
+  .form-control>input,
+  .form-control>select {
+    @apply py-5 px-4 border border-Grey-Shade_3 rounded-lg text-Grey-Shade_1 font-medium text-sm leading-snug appearance-none focus:border-Black focus:outline-none;
+  }
 }
