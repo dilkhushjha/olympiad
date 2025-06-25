@@ -67,36 +67,22 @@ export default function TopNav() {
                         )}
                     </Link>
                     <ul className="md:flex gap-12 text-white mr-4 h-full hidden font-semibold ">
-                        <Li href="/#about">
-
-                            <div tabIndex={0} role="button" className="">
-                                About
-                            </div>
+                        <Li href="/#about" isFixed={checkForFixedNav}>
+                            <div tabIndex={0} role="button">About</div>
                         </Li>
-                        <Li href="/#process">
-
-                            <div tabIndex={0} role="button" className="">
-                                Process
-                            </div>
+                        <Li href="/#process" isFixed={checkForFixedNav}>
+                            <div tabIndex={0} role="button">Process</div>
                         </Li>
-                        <Li href="/#rewards">
-
-                            <div tabIndex={0} role="button" className="">
-                                Rewards
-                            </div>
+                        <Li href="/#rewards" isFixed={checkForFixedNav}>
+                            <div tabIndex={0} role="button">Rewards</div>
                         </Li>
-                        <Li href="/#testimonials">
-
-                            <div tabIndex={0} role="button" className="">
-                                Testimonials
-                            </div>
+                        <Li href="/#testimonials" isFixed={checkForFixedNav}>
+                            <div tabIndex={0} role="button">Testimonials</div>
                         </Li>
-                        <Li href="/#faqs">
-
-                            <div tabIndex={0} role="button" className="">
-                                FAQs
-                            </div>
+                        <Li href="/#faqs" isFixed={checkForFixedNav}>
+                            <div tabIndex={0} role="button">FAQs</div>
                         </Li>
+
                     </ul>
 
 
@@ -119,7 +105,7 @@ export default function TopNav() {
     );
 }
 
-const Li = ({ href, children, isFixed }: LiProps) => {
+const Li = ({ href, children, isFixed = false }: LiProps) => {
     return (
         <li
             className={twMerge(
@@ -153,6 +139,7 @@ const Li = ({ href, children, isFixed }: LiProps) => {
         </li>
     );
 };
+
 
 const Spacer = () => {
     return <span className="w-4 block relative h-[140px]"></span>;

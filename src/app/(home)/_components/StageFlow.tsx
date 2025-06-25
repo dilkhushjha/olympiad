@@ -8,7 +8,7 @@ export default function StageFlow() {
 
                 {/* Stage 1 */}
                 <div className="flex flex-col items-center">
-                    <Image src={'/images/olympiad/stage1.png'} width={200} height={180}></Image>
+                    <Image src={'/images/olympiad/stage1.png'} width={200} height={180} alt="stage1"></Image>
                     <p className="text-white font-bold xl:text-xl sm:text-base mt-2">Entry Level Exam</p>
                 </div>
 
@@ -22,7 +22,7 @@ export default function StageFlow() {
 
                 {/* Stage 2 */}
                 <div className="flex flex-col items-center">
-                    <Image src={'/images/olympiad/stage2.png'} width={200} height={180}></Image>
+                    <Image src={'/images/olympiad/stage2.png'} width={200} height={180} alt="stage2"></Image>
                     <p className="text-white font-bold xl:text-xl sm:text-base mt-2">Main Exam</p>
                 </div>
 
@@ -36,7 +36,7 @@ export default function StageFlow() {
 
                 {/* Reward */}
                 <div className="flex flex-col items-center">
-                    <Image src={'/images/olympiad/stage3.png'} width={200} height={180}></Image>
+                    <Image src={'/images/olympiad/stage3.png'} width={200} height={180} alt="stage2"></Image>
                     <p className="text-white font-bold xl:text-xl sm:text-base mt-2">Reward</p>
                 </div>
 

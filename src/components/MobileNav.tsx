@@ -2,19 +2,16 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { BiChevronRight } from "react-icons/bi";
-import { navigation } from "@/lib/constants"; // Import navigation data
+
 import { MdClose } from "react-icons/md";
 import { usePathname } from "next/navigation";
 
 export default function MobileNav({ checkForFixedNav }) {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [, setActiveDropdown] = useState<string | null>(null);
 
-  const toggleDropdown = (name: string) => {
-    setActiveDropdown(activeDropdown === name ? null : name);
-  };
+
 
   useEffect(() => {
     setMenuOpen(false);

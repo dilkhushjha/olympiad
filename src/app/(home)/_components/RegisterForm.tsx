@@ -81,7 +81,7 @@ const RegisterForm = (props) => {
         if (step === 3) {
             router.push('/registration-form');
         }
-    }, [step]);
+    });
 
 
     return (

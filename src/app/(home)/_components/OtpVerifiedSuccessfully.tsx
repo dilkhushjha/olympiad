@@ -5,7 +5,7 @@ const OtpVerifiedSuccessfully = ({ onClose }) => {
     return (
         <div className="fixed inset-0 bg-gray-900 bg-opacity-50 flex justify-center items-center z-50">
             <div className="bg-white w-max rounded-3xl shadow-lg z-999 ">
-                <div className="absolute py-[120px] px-14 flex flex-col items-center justify-center rounded-2xl text-center gap-10 relative bg-white">
+                <div className="absolute py-[120px] px-14 flex flex-col items-center justify-center rounded-2xl text-center gap-10 bg-white">
                     <button onClick={onClose} className="absolute top-4 right-4 border px-2 rounded text-gray-500 hover:text-red-500">
                         ×
                     </button>
