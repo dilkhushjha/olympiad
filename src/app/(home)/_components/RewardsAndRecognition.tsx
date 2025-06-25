@@ -1,9 +1,9 @@
 import Image from "next/image";
 import React from "react";
 
-export default function RewardsAndRecognision() {
+export default function RewardsAndRecognition() {
   return (
-    <section className="bg-[#FEF6F6] py-10">
+    <section className="bg-Accent-Red_4 spacing-xy">
       <div className="container flex flex-col gap-8 justify-center items-center p-8">
         <div className="flex flex-col items-center md:w-1/3">
           <h3 className="text-[#1A64C6] font-semibold m-2">

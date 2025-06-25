@@ -2,6 +2,9 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import OtpVerificationModal from "./OtpVerificationModal";
+import RegisterForm from "./RegisterForm";
+
+const formText = ''
 
 const NextChampion = () => {
   const [formData, setFormData] = useState({
@@ -40,68 +43,7 @@ const NextChampion = () => {
         {/* Right Card */}
         <div>
           <div className="col w-full flex">
-            <div className="bg-white p-8 rounded-3xl w-full max-w-[480px] flex flex-col gap-4">
-              <div className="flex flex-col gap-4">
-                <h1 className="text-xl font-bold  text-gray-800">
-                  Register Now
-                </h1>
-                <div className="flex flex-row gap-4 items-center">
-                  <Image
-                    src={"/images/olympiad/registered-img.png"}
-                    alt="registered"
-                    height={100}
-                    width={100}
-                  ></Image>
-                  <p className="text-black">
-                    <strong>10000+</strong> students have already registered.
-                  </p>
-                </div>
-              </div>
-              <form onSubmit={handleSubmit}>
-                <div className="form-control my-2">
-                  {/* Phone Input Group */}
-                  <div className="flex items-center rounded-lg border border-gray-300 hover:border-gray-500 focus-within:border-gray-500 px-4 py-3 transition-colors w-full max-w-md gap-2">
-                    {/* Flag Image */}
-                    <Image
-                      src="/images/olympiad/flag.png"
-                      alt="India Flag"
-                      className="w-6 h-4 object-cover rounded-sm"
-                      width={24}
-                      height={16}
-                    />
-
-                    {/* Country Code */}
-                    <span className="text-gray-600 text-sm font-medium">
-                      +91
-                    </span>
-
-                    {/* Divider */}
-                    <div className="h-5 w-px bg-gray-300 md:mx-2" />
-
-                    {/* Phone Number Input */}
-                    <input
-                      name="mobileNo"
-                      type="tel"
-                      onChange={handleFormData}
-                      value={formData.mobileNo}
-                      placeholder="Enter your mobile no"
-                      className="flex-1 bg-transparent outline-none text-gray-700 placeholder-gray-400 text-sm"
-                    />
-                  </div>
-                </div>
-
-                {/* Submit Button */}
-                <div className="mt-4">
-                  <button
-                    type="submit"
-                    className="btn-secondary w-full text-white rounded-full"
-                    onClick={() => setOtpModal(true)}
-                  >
-                    GET OTP
-                  </button>
-                </div>
-              </form>
-            </div>
+            <RegisterForm />
           </div>
         </div>
       </section>
