@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function ReviewCard() {
   return (
-    <div className="flex xl:flex-nowrap flex-wrap gap-4 mx-auto">
+    <div className="flex xl:flex-nowrap container flex-wrap gap-4 mx-auto bg-Primary-Shade_7 pb-20">
       <div className="p-8 border bg-[#03B46E] text-white rounded-3xl w-full md:basis-1/3">
         <div className="flex flex-col gap-8">
           <div className="">
