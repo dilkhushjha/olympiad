@@ -6,6 +6,8 @@ import NextChampion from "./_components/NextChampion";
 import ReviewCard from "./_components/ReviewCard";
 import FaqSection from "./_components/FaqSection";
 import RewardsAndRecognision from "./_components/RewardsAndRecognision";
+import RankBanner from "./_components/RankBanner";
+import TourGallery from "./_components/TourGallery";
 
 const Olympiad = () => {
   return (
@@ -83,7 +85,15 @@ const Olympiad = () => {
       </div>
 
       <div>
+        <RankBanner />
+      </div>
+
+      <div>
         <RewardsAndRecognision />
+      </div>
+
+      <div>
+        <TourGallery />
       </div>
 
       <div>
