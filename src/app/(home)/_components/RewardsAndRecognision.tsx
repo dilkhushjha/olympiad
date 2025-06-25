@@ -3,9 +3,9 @@ import React from "react";
 
 export default function RewardsAndRecognision() {
   return (
-    <section className="bg-[#FEF6F6]">
+    <section className="bg-[#FEF6F6] py-10">
       <div className="container flex flex-col gap-8 justify-center items-center p-8">
-        <div className="flex flex-col items-center w-1/3">
+        <div className="flex flex-col items-center md:w-1/3">
           <h3 className="text-[#1A64C6] font-semibold m-2">
             Rewards & Recognition
           </h3>
@@ -14,7 +14,7 @@ export default function RewardsAndRecognision() {
           </h2>
         </div>
         <div className="flex flex-col items-center">
-          <div className="grid sm:grid-cols-1 items-center lg:grid-cols-3 gap-5 w-full">
+          <div className="grid sm:grid-cols-1 md:grid-cols-2 items-center lg:grid-cols-3 gap-5 w-full">
             <div className="bg-[url('/images/olympiad/bggrid1.png')] bg-contain bg-no-repeat bg-center flex flex-col items-center p-4 w-[376px] h-[376px]">
               <Image
                 src="images/olympiad/grid1.png"
@@ -154,7 +154,7 @@ export default function RewardsAndRecognision() {
                 <h2 className="text-2xl font-bold my-4 w-4/5 ">
                   Register Now For Free
                 </h2>
-                <p></p>
+                <p className="text-2xl">&#8594;</p>
               </div>
             </div>
           </div>
