@@ -6,9 +6,12 @@ import FooterOlympiad from "@/components/FooterOlympiad";
 import { ContentWrapper } from "@/lib/AppContext";
 
 export const metadata: Metadata = {
-  title: "Matrix Edu: Impulse Course for Excellence",
-  description:
-    "Embark on brilliance with 'Impulse,' a 1-year Integrated Foundation Program for JEE Main & Advanced. Elevate from 11th to 12th seamlessly. Join for academic excellence!",
+  title: "Matrix Olympiad: High-Impact Olympiad Exam for JEE, NEET, CLAT,NDA, Boards & Olympiad",
+  description: "High-Impact Olympiad Exam for JEE, NEET, CLAT,NDA, Boards & Olympiad",
+  icons: {
+    apple: "/faviconolymp.png",
+    icon: "/faviconolymp.png",
+  }
 };
 
 export default function RootLayout({

@@ -8,90 +8,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* -------------------- Font Face Declarations -------------------- */
-@font-face {
-  font-family: "Chopin Trial";
-  src: url("/fonts/Chopin-Trial-Regular.otf") format("opentype");
-  font-weight: 400;
-  font-style: normal;
-}
 
-@font-face {
-  font-family: "Chopin Trial";
-  src: url("/fonts/Chopin-Trial-RegularItalic.otf") format("opentype");
-  font-weight: 400;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Chopin Trial";
-  src: url("/fonts/Chopin-Trial-Bold.otf") format("opentype");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Chopin Trial";
-  src: url("/fonts/Chopin-Trial-BoldItalic.otf") format("opentype");
-  font-weight: 700;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Chopin Trial";
-  src: url("/fonts/Chopin-Trial-Medium.otf") format("opentype");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Chopin Trial";
-  src: url("/fonts/Chopin-Trial-MediumItalic.otf") format("opentype");
-  font-weight: 500;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Chopin Trial";
-  src: url("/fonts/Chopin-Trial-Light.otf") format("opentype");
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Chopin Trial";
-  src: url("/fonts/Chopin-Trial-LightItalic.otf") format("opentype");
-  font-weight: 300;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Chopin Trial";
-  src: url("/fonts/Chopin-Trial-ExtraBold.otf") format("opentype");
-  font-weight: 800;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Chopin Trial";
-  src: url("/fonts/Chopin-Trial-ExtraBoldItalic.otf") format("opentype");
-  font-weight: 800;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Chopin Trial";
-  src: url("/fonts/Chopin-Trial-Thin.otf") format("opentype");
-  font-weight: 100;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Chopin Trial";
-  src: url("/fonts/Chopin-Trial-ThinItalic.otf") format("opentype");
-  font-weight: 100;
-  font-style: italic;
-}
 
 /* -------------------- Root Colors -------------------- */
 :root {
@@ -124,6 +41,7 @@ body {
   font-size: 14px;
   font-weight: 500;
   scroll-behavior: smooth;
+  letter-spacing: 0.2px;
 }
 
 h1,
