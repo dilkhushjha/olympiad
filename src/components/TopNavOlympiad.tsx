@@ -70,31 +70,31 @@ export default function TopNav() {
                         )}
                     </Link>
                     <ul className="md:flex gap-12 text-white mr-4 h-full hidden font-semibold ">
-                        <Li href="/about">
+                        <Li href="#about">
 
                             <div tabIndex={0} role="button" className="">
                                 About
                             </div>
                         </Li>
-                        <Li href="/process">
+                        <Li href="#process">
 
                             <div tabIndex={0} role="button" className="">
                                 Process
                             </div>
                         </Li>
-                        <Li href="/rewards">
+                        <Li href="#rewards">
 
                             <div tabIndex={0} role="button" className="">
                                 Rewards
                             </div>
                         </Li>
-                        <Li href="/testimonials">
+                        <Li href="#testimonials">
 
                             <div tabIndex={0} role="button" className="">
                                 Testimonials
                             </div>
                         </Li>
-                        <Li href="/faqs">
+                        <Li href="#faqs">
 
                             <div tabIndex={0} role="button" className="">
                                 FAQs

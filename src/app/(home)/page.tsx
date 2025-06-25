@@ -7,7 +7,8 @@ import WhyMof from "./_components/WhyMof";
 import NextChampion from "./_components/NextChampion";
 import ReviewCard from "./_components/ReviewCard";
 import FaqSection from "./_components/FaqSection";
-import RewardsAndRecognision from "./_components/RewardsAndRecognision";
+import RewardsAndRecognition from "./_components/RewardsAndRecognition";
+import StageFlow from "./_components/StageFlow";
 
 const Olympiad = () => {
     return (
@@ -250,8 +251,6 @@ const Olympiad = () => {
 
                             </div>
 
-
-
                         </div>
 
                     </div>
@@ -262,15 +261,17 @@ const Olympiad = () => {
 
             {/* Exam Process */}
 
-            <section className="spacing-xy bg-Secondary-Shade_2">
-                <div className="container mx-auto">
+            <section className="spacing-xy bg-Secondary-Shade_2" id="process">
+                <div className="container flex flex-col gap-10 mx-auto">
                     <div className="flex flex-col gap-3 text-center">
 
                         <p className="text-xl text-Accent-Yellow_2 font-semibold">Exam Process</p>
-                        <h2 className="text-2xl text-white xl:text-3xl md:text-2xl font-bold">Important Dates & Exam Phases</h2>
+                        <h2 className="text-2xl text-white xl:text-3xl md:text-2xl font-bold">Our Exam Conducting <br /> Process is Simple</h2>
                     </div>
 
-
+                    <div className="">
+                        <StageFlow />
+                    </div>
                 </div>
 
             </section>
@@ -280,15 +281,15 @@ const Olympiad = () => {
 
 
 
-            <div>
-                <RewardsAndRecognision />
+            <div className="" id="rewards">
+                <RewardsAndRecognition />
             </div>
 
-            <div>
+            <div id="faqs">
                 <FaqSection />
             </div>
 
-            <div className="container pt-[120px]">
+            <div className="container pt-[120px]" id="testimonials">
                 <ReviewCard />
             </div>
 

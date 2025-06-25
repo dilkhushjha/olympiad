@@ -4,10 +4,11 @@
 import React, { useState } from "react";
 import Image from 'next/image';
 import OtpVerifiedSuccessfully from "./OtpVerifiedSuccessfully";
+import MobileNav from "@/components/MobileNav";
 
 const otpData = [1, 2, 3, 4, 5, 7];
 
-const RegisterForm: React.FC = () => {
+const RegisterForm: React.FC = (formText = '') => {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
 
@@ -61,8 +62,16 @@ const RegisterForm: React.FC = () => {
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        setIsSubmitted(true);
-        setStep(2);
+        if (formData.mobileNo === '') {
+            alert("Please enter mobile no!")
+            setIsSubmitted(false);
+            setStep(1)
+        }
+        else {
+
+            setIsSubmitted(true);
+            setStep(2);
+        }
     };
 
 
@@ -90,7 +99,7 @@ const RegisterForm: React.FC = () => {
                                 <div className="flex flex-col gap-5">
                                     <h2 className="text-2xl  text-black">
                                         Please Enter OTP <br />
-                                        Received on <strong>'+91&nbsp;{formData.mobileNo}'
+                                        Received on <strong>&nbsp;{'+91' + formData.mobileNo}
                                         </strong>
                                     </h2>
                                     <div className="flex flex-col gap-2 w-[460px]">
@@ -228,12 +237,13 @@ const RegisterForm: React.FC = () => {
                                     value={formData.mobileNo}
                                     placeholder="Enter your mobile no"
                                     className="flex-1 bg-transparent outline-none text-gray-700 placeholder-gray-400"
+                                    required
                                 />
                             </div>
                         </div>
 
                         {/* Submit Button */}
-                        <div className="mt-4">
+                        <div className="mt-4 form-control">
                             <button type="submit" className="btn-secondary w-full text-white rounded-full" onClick={handleSubmit}>
                                 GET OTP
                             </button>
