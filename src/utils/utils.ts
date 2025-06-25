@@ -2,23 +2,10 @@
 import { coursesData } from "@/lib/constants";
 import { capitalize, debounce, replace } from "lodash";
 
-const pageName = "foundation-science";
 
 export const navToExclude = [
   '/',
-  // '/login',
-  '/msat',
-  '/about-us',
-  '/neet-college-predictor',
-  '/why-matrix',
-  '/jee-advanced-rank-predictor',
-  '/jee-mains-rank-predictor',
-  `/careers/explore-new-openings/${pageName}`,
-  '/scholarships',
-  '/results',
-  '/jee-college-and-branch-predictor',
-  '/admission/apply-for-direct-admission',
-  '/olympiad'
+  
 ];
 
 export const slugify = (text: string): string => {

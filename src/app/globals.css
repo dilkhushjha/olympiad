@@ -161,6 +161,8 @@ h6 {
   @apply bg-Primary-Shade_1;
 }
 
+
+
 /* -------------------- Custom Utilities Layer -------------------- */
 @layer utilities {
   .btn {
@@ -245,12 +247,20 @@ h6 {
     @apply space-y-2 relative;
   }
 
-  .form-control > label {
+  .form-control>label {
     @apply text-sm text-Grey-Shade_1 leading-snug;
   }
 
-  .form-control > input,
-  .form-control > select {
+  .form-control>input,
+  .form-control>select {
     @apply py-5 px-4 border border-Grey-Shade_3 rounded-lg text-Grey-Shade_1 font-medium text-sm leading-snug appearance-none focus:border-Black focus:outline-none;
+  }
+
+  .custom-swiper-pagination .swiper-pagination-bullet {
+    @apply w-2 h-2 bg-Grey-Shade_1 rounded-full transition-all duration-300;
+  }
+
+  .custom-swiper-pagination .swiper-pagination-bullet-active {
+    @apply w-6 bg-Secondary-Shade_3 rounded-full;
   }
 }

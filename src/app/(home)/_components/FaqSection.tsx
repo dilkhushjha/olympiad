@@ -40,11 +40,11 @@ export default function FaqSection() {
     }
   };
   return (
-    <section className="container flex flex-col mx-auto items-center">
+    <section className="container flex flex-col mx-auto items-center spacing-t">
       <div className="flex flex-col m-2 items-center">
-        <p className="text-Secondary-Shade_2 font-bold mt-16">FAQs</p>
-        <p className="text-2xl md:text-3xl font-extrabold">Have a question?</p>
-        <p className="text-[#718298] text-sm my-8">
+        <p className="text-Secondary-Shade_2 text-[20px] font-bold ">FAQs</p>
+        <p className="xl:text-[44px] text-2xl font-extrabold">Have a question?</p>
+        <p className="text-Grey-Shade_1 text-lg mt-4">
           Find the answers in our FAQs
         </p>
       </div>

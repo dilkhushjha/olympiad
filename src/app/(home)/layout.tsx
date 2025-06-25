@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
 import "../globals.css";
 import TopNavOlympiad from "@/components/TopNavOlympiad";
-import Footer from "@/components/Footer";
 import FooterOlympiad from "@/components/FooterOlympiad";
-import Breadcrumb from "@/components/Breadcrumbs";
-import LearnerSupport from "@/components/LearnerSupport";
+
 import { ContentWrapper } from "@/lib/AppContext";
 
 export const metadata: Metadata = {

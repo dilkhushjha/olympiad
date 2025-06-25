@@ -3,23 +3,23 @@ import Image from "next/image";
 
 export default function ReviewCard() {
   return (
-    <div className="flex xl:flex-nowrap container flex-wrap gap-4 mx-auto bg-Primary-Shade_7 pb-20">
-      <div className="p-8 border bg-[#03B46E] text-white rounded-3xl w-full md:basis-1/3">
-        <div className="flex flex-col gap-8">
-          <div className="">
-            <svg
-              width="45"
-              height="50"
-              viewBox="0 0 25 20"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M4.56716 9.90985C4.8476 9.86979 5.22819 9.84975 5.70895 9.84975C7.23133 9.84975 8.37312 10.2904 9.13431 11.1718C9.93557 12.0131 10.3362 13.0748 10.3362 14.3568C10.3362 15.719 9.87547 16.8607 8.95403 17.7822C8.07265 18.7036 6.85073 19.1644 5.28829 19.1644C3.68578 19.1644 2.40377 18.7237 1.44226 17.8423C0.480753 16.9208 0 15.5988 0 13.8761C0 11.5524 0.701099 9.20875 2.1033 6.84505C3.50549 4.44128 5.22819 2.43814 7.27139 0.835632L8.47328 2.09761C5.8692 4.86194 4.56716 7.46602 4.56716 9.90985ZM18.6292 9.90985C18.9096 9.86979 19.2902 9.84975 19.771 9.84975C21.2934 9.84975 22.4352 10.2904 23.1963 11.1718C23.9976 12.0131 24.3982 13.0748 24.3982 14.3568C24.3982 15.719 23.9375 16.8607 23.0161 17.7822C22.1347 18.7036 20.9128 19.1644 19.3503 19.1644C17.7478 19.1644 16.4658 18.7237 15.5043 17.8423C14.5428 16.9208 14.062 15.5988 14.062 13.8761C14.062 11.5524 14.7631 9.20875 16.1653 6.84505C17.5675 4.44128 19.2902 2.43814 21.3334 0.835632L22.5353 2.09761C19.9312 4.86194 18.6292 7.46602 18.6292 9.90985Z"
-                fill="#04DC86"
-              />
-            </svg>
-          </div>
+    <div className="flex xl:flex-nowrap container flex-wrap gap-4 mx-auto bg-Primary-Shade_7 ">
+      <div className="p-8 border bg-[#03B46E] text-white rounded-3xl w-full md:basis-1/3 justify-between">
+        <div className="flex flex-col gap-10">
+
+          <svg
+            width="45"
+            height="50"
+            viewBox="0 0 25 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M4.56716 9.90985C4.8476 9.86979 5.22819 9.84975 5.70895 9.84975C7.23133 9.84975 8.37312 10.2904 9.13431 11.1718C9.93557 12.0131 10.3362 13.0748 10.3362 14.3568C10.3362 15.719 9.87547 16.8607 8.95403 17.7822C8.07265 18.7036 6.85073 19.1644 5.28829 19.1644C3.68578 19.1644 2.40377 18.7237 1.44226 17.8423C0.480753 16.9208 0 15.5988 0 13.8761C0 11.5524 0.701099 9.20875 2.1033 6.84505C3.50549 4.44128 5.22819 2.43814 7.27139 0.835632L8.47328 2.09761C5.8692 4.86194 4.56716 7.46602 4.56716 9.90985ZM18.6292 9.90985C18.9096 9.86979 19.2902 9.84975 19.771 9.84975C21.2934 9.84975 22.4352 10.2904 23.1963 11.1718C23.9976 12.0131 24.3982 13.0748 24.3982 14.3568C24.3982 15.719 23.9375 16.8607 23.0161 17.7822C22.1347 18.7036 20.9128 19.1644 19.3503 19.1644C17.7478 19.1644 16.4658 18.7237 15.5043 17.8423C14.5428 16.9208 14.062 15.5988 14.062 13.8761C14.062 11.5524 14.7631 9.20875 16.1653 6.84505C17.5675 4.44128 19.2902 2.43814 21.3334 0.835632L22.5353 2.09761C19.9312 4.86194 18.6292 7.46602 18.6292 9.90985Z"
+              fill="#04DC86"
+            />
+          </svg>
+
           <p className="text-white text-sm">
             Hearing about the quality assessment of the Matrix Olympiad, I took
             the test in 2022 and achieved Rank 21. It evaluated my skills and
@@ -32,13 +32,15 @@ export default function ReviewCard() {
             <Image
               src={"/images/olympiad/rohit.png"}
               alt="public img"
-              width={50}
-              height={50}
+              width={30}
+              height={30}
             />
-            <h2 className="text-white text-xl font-bold">Rohit Yadav</h2>
+            <h2 className="text-white text-[20px] font-bold">Rohit Yadav</h2>
           </div>
         </div>
       </div>
+
+
       <div className="p-8 border bg-[#FF7D05] text-white rounded-3xl w-full md:basis-1/3">
         <div className="flex flex-col gap-8">
           <div className="">
@@ -68,10 +70,10 @@ export default function ReviewCard() {
             <Image
               src={"/images/olympiad/Uttam.png"}
               alt="public img"
-              width={50}
+              width={30}
               height={50}
             />
-            <h2 className="text-white text-xl font-bold">
+            <h2 className="text-white text-[20px] font-bold">
               Uttam Paharia Knoch
             </h2>
           </div>
@@ -106,10 +108,10 @@ export default function ReviewCard() {
             <Image
               src={"/images/olympiad/Jayant.png"}
               alt="public img"
-              width={50}
+              width={30}
               height={50}
             />
-            <h2 className="text-white text-xl font-bold">Jayant Kumar</h2>
+            <h2 className="text-white text-[20px] font-bold">Jayant Kumar</h2>
           </div>
         </div>
       </div>

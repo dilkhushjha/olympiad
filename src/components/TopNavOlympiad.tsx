@@ -5,10 +5,7 @@ import React, { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { twMerge } from "tailwind-merge";
 import { navToExclude } from "@/utils/utils";
-import NavigationMenu from "./NavigationMenu";
-import { BiChevronRight } from "react-icons/bi";
-import { navigation } from "@/lib/constants";
-import { uniqueId } from "lodash";
+
 import MobileNav from "./MobileNav";
 
 type LiProps = {
@@ -156,5 +153,5 @@ const Li = ({ href, children, isFixed }: LiProps) => {
 };
 
 const Spacer = () => {
-    return <span className="w-4 block relative h-[160px]"></span>;
+    return <span className="w-4 block relative h-[140px]"></span>;
 };
