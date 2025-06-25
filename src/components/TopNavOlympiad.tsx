@@ -66,7 +66,7 @@ export default function TopNav() {
                             />
                         )}
                     </Link>
-                    <ul className="md:flex gap-12 text-white mr-4 h-full hidden font-semibold ">
+                    <ul className="md:flex gap-12 mr-4 h-full hidden font-semibold ">
                         <Li href="/#about" isFixed={checkForFixedNav}>
                             <div tabIndex={0} role="button">About</div>
                         </Li>
@@ -110,7 +110,7 @@ const Li = ({ href, children, isFixed = false }: LiProps) => {
         <li
             className={twMerge(
                 "flex items-center font-regular",
-                isFixed ? "text-White" : "text-Black"
+                isFixed ? "text-black" : "text-black"
             )}
         >
             {href === "#" ? (
