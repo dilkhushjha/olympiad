@@ -1,4 +1,4 @@
-import { ChevronLeft } from 'lucide-react';
+
 import { useRouter } from 'next/navigation';
 import React, { useState } from 'react'
 
@@ -6,11 +6,13 @@ const classes = ['5th', '6th', '7th', '8th', '9th', '10th', '11th', '12th'];
 const subjects = ['Arts', 'Maths', 'Bio', 'Commerce'];
 const boards = ['CBSE', 'ICSE', 'RBSE', 'Bihar', 'UP', 'Punjab', 'MP', 'Haryana', 'J&K'];
 const goals = ['Engineering', 'Medical', 'Civil Services', 'Commerce', 'Others'];
+const errors = ['']
 
 
 const Step1 = ({ onNext }: { onNext: () => void }) => {
 
     const [isSelected, setIsSelected] = useState(false);
+    const [error, setError] = useState('');
 
     const [formData, setFormData] = useState({
         class: '',
@@ -34,6 +36,9 @@ const Step1 = ({ onNext }: { onNext: () => void }) => {
     const handleSelect = (field: string, value: string) => {
         setIsSelected(!isSelected);
         setFormData(prev => ({ ...prev, [field]: value }));
+        if (error === field && value.trim() !== '') {
+            setError('');
+        }
     };
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
@@ -43,6 +48,33 @@ const Step1 = ({ onNext }: { onNext: () => void }) => {
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
+
+        // Check each required field
+        const requiredFields: { key: keyof typeof formData; label: string }[] = [
+            { key: "class", label: "Class" },
+            { key: "subject", label: "Subject" },
+            { key: "board", label: "Board" },
+            { key: "goal", label: "Goal" },
+            { key: "name", label: "Name" },
+            { key: "email", label: "Email" },
+            { key: "whatsapp", label: "WhatsApp Number" },
+            { key: "dobDay", label: "Date of Birth - Day" },
+            { key: "dobMonth", label: "Date of Birth - Month" },
+            { key: "dobYear", label: "Date of Birth - Year" },
+            { key: "fatherName", label: "Father's Name" },
+            { key: "fatherOccupation", label: "Father's Occupation" },
+            { key: "fatherMobile", label: "Father's Mobile" },
+            { key: "school", label: "School" }
+        ];
+
+        for (const field of requiredFields) {
+            if (!formData[field.key].trim()) {
+                setError(field.label.toLowerCase());
+                return;
+            }
+        }
+
+        // All fields are filled
         onNext();
         console.log(formData);
     };
@@ -54,23 +86,21 @@ const Step1 = ({ onNext }: { onNext: () => void }) => {
         router.push('/');
     };
     return (
-        <div>
-            <button type="button" onClick={goToHome} className="mb-4 flex items-center text-gray-600 hover:text-black">
-                <ChevronLeft className="w-5 h-5 mr-1" /> Back
+        <div className='flex flex-col gap-8'>
+            <button type="button" onClick={goToHome} className=" flex items-center text-2xl text-Grey-Shade_1 hover:text-black">
+                ←
+
             </button>
-            <form onSubmit={handleSubmit} className="flex gap-12 justify-between">
+            <form onSubmit={handleSubmit} className="flex xl:flex-row flex-col xl:gap-[60px] gap-10 justify-between">
 
                 {/* Left: Selection Buttons */}
                 <div className=' flex  basis-1/2'>
 
                     <div>
 
+                        <h2 className="text-2xl max-w-[70%] xl:max-w-[60%]  font-bold mb-10">Please Complete  your profile</h2>
 
-
-
-                        <h2 className="text-2xl  md:text-[44px] font-bold mb-10">Please Complete <br /> your profile</h2>
-
-                        <div className="space-y-4 w-[75%] flex flex-col gap-4">
+                        <div className="space-y-4 xl:w-[75%] flex flex-col gap-4">
                             <div className='flex flex-col gap-2'>
                                 <p className="font-bold mb-2">Select Class</p>
                                 <div className="flex flex-wrap gap-2">
@@ -78,9 +108,10 @@ const Step1 = ({ onNext }: { onNext: () => void }) => {
                                         <button
                                             type="button"
                                             key={item}
+                                            value={formData.class}
                                             onClick={() => handleSelect('class', item)}
-                                            className={`px-4 py-2 rounded-full border text-sm font-medium flex items-center gap-2 ${formData.class === item
-                                                ? 'text-Primary-Shade_2 border-Primary-Shade_2'
+                                            className={`px-4 py-2 rounded-full border text-sm  flex items-center gap-2 ${formData.class === item
+                                                ? 'text-Primary-Shade_2 border-Primary-Shade_2 font-bold'
                                                 : 'bg-white text-gray-600 border-gray-300'
                                                 }`}
                                         >
@@ -106,6 +137,12 @@ const Step1 = ({ onNext }: { onNext: () => void }) => {
                                     ))}
 
                                 </div>
+                                {error === 'class' && (
+                                    <p className="text-red-500 text-xs py-2">
+                                        Please select your class.
+                                    </p>
+                                )}
+
                             </div>
 
                             <div className='flex flex-col gap-2'>
@@ -115,9 +152,10 @@ const Step1 = ({ onNext }: { onNext: () => void }) => {
                                         <button
                                             type="button"
                                             key={item}
+                                            value={formData.subject}
                                             onClick={() => handleSelect('subject', item)}
-                                            className={`px-4 py-2 rounded-full border text-sm font-medium flex items-center gap-2 ${formData.subject === item
-                                                ? 'text-Primary-Shade_2 border-Primary-Shade_2'
+                                            className={`px-4 py-2 rounded-full border text-sm  flex items-center gap-2 ${formData.subject === item
+                                                ? 'text-Primary-Shade_2 border-Primary-Shade_2 font-bold'
                                                 : 'bg-white text-gray-600 border-gray-300'
                                                 }`}
                                         >
@@ -143,6 +181,11 @@ const Step1 = ({ onNext }: { onNext: () => void }) => {
                                     ))}
 
                                 </div>
+                                {error === 'subject' && (
+                                    <p className="text-red-500 text-xs py-2">
+                                        Please select your subject.
+                                    </p>
+                                )}
                             </div>
 
                             <div className='flex flex-col gap-2'>
@@ -152,9 +195,10 @@ const Step1 = ({ onNext }: { onNext: () => void }) => {
                                         <button
                                             type="button"
                                             key={item}
+                                            value={formData.board}
                                             onClick={() => handleSelect('board', item)}
-                                            className={`px-4 py-2 rounded-full border text-sm font-medium flex items-center gap-2 ${formData.board === item
-                                                ? 'text-Primary-Shade_2 border-Primary-Shade_2'
+                                            className={`px-4 py-2 rounded-full border text-sm  flex items-center gap-2 ${formData.board === item
+                                                ? 'text-Primary-Shade_2 border-Primary-Shade_2 font-bold'
                                                 : 'bg-white text-gray-600 border-gray-300'
                                                 }`}
                                         >
@@ -180,6 +224,11 @@ const Step1 = ({ onNext }: { onNext: () => void }) => {
                                     ))}
 
                                 </div>
+                                {error === 'board' && (
+                                    <p className="text-red-500 text-xs py-2">
+                                        Please select a board.
+                                    </p>
+                                )}
                             </div>
 
                             <div className='flex flex-col gap-2'>
@@ -189,9 +238,10 @@ const Step1 = ({ onNext }: { onNext: () => void }) => {
                                         <button
                                             type="button"
                                             key={item}
+                                            value={formData.goal}
                                             onClick={() => handleSelect('goal', item)}
-                                            className={`px-4 py-2 rounded-full border text-sm font-medium flex items-center gap-2 ${formData.goal === item
-                                                ? 'text-Primary-Shade_2 border-Primary-Shade_2'
+                                            className={`px-4 py-2 rounded-full border text-sm  flex items-center gap-2 ${formData.goal === item
+                                                ? 'text-Primary-Shade_2 border-Primary-Shade_2 font-bold'
                                                 : 'bg-white text-gray-600 border-gray-300'
                                                 }`}
                                         >
@@ -217,6 +267,11 @@ const Step1 = ({ onNext }: { onNext: () => void }) => {
                                     ))}
 
                                 </div>
+                                  {error === 'goal' && (
+                                    <p className="text-red-500 text-xs py-2">
+                                        Please select your goal.
+                                    </p>
+                                )}
                             </div>
                         </div>
 
@@ -239,14 +294,14 @@ const Step1 = ({ onNext }: { onNext: () => void }) => {
 
 
                 {/* Right: Form Inputs */}
-                <div className="bg-Primary-Shade_7 rounded-3xl p-8 basis-1/2 h-max  flex flex-col gap-4">
+                <div className="bg-Primary-Shade_7 rounded-3xl p-8 basis-1/2 h-max  flex flex-col gap-4 hover:shadow-xl">
                     <div className="flex justify-between items-center mb-6">
                         <h3 className="font-bold text-lg">Let us know more about you!</h3>
                     </div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 text-xs text-Grey-Shade_1">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 xl:gap-8 gap-6 text-xs text-Grey-Shade_1">
                         {/* Full Name */}
-                        <div className="flex flex-col">
+                        <div className="flex flex-col xl:col-span-1 col-span-2">
                             <label htmlFor="name" className="mb-2 ">Student Name</label>
                             <input
                                 name="name"
@@ -254,12 +309,12 @@ const Step1 = ({ onNext }: { onNext: () => void }) => {
                                 placeholder="Enter Full Name"
                                 onChange={handleChange}
                                 className="border px-4 py-3 rounded-lg text-sm"
-                                required
+                                
                             />
                         </div>
 
                         {/* Email */}
-                        <div className="flex flex-col">
+                        <div className="flex flex-col xl:col-span-1 col-span-2">
                             <label htmlFor="email" className="mb-2">Email</label>
                             <input
                                 name="email"
@@ -267,12 +322,12 @@ const Step1 = ({ onNext }: { onNext: () => void }) => {
                                 placeholder="E.g, Rahul@gmail.com"
                                 onChange={handleChange}
                                 className="border px-4 py-3 rounded-lg text-sm"
-                                required
+                                
                             />
                         </div>
 
                         {/* WhatsApp No */}
-                     <div className="flex flex-col col-span-2">
+                        <div className="flex flex-col col-span-2">
                             <label htmlFor="fatherMobile" className="mb-2">Father’s Mobile No.</label>
                             <div className="flex items-center border bg-white rounded-lg px-3 py-3 text-sm">
                                 <span className="text-gray-500 pr-2 border-r">+91</span>
@@ -325,7 +380,7 @@ const Step1 = ({ onNext }: { onNext: () => void }) => {
                         </div>
 
                         {/* Father's Name */}
-                        <div className="flex flex-col">
+                        <div className="flex flex-col xl:col-span-1 col-span-2">
                             <label htmlFor="fatherName" className="mb-2">Father’s Name</label>
                             <input
                                 name="fatherName"
@@ -337,7 +392,7 @@ const Step1 = ({ onNext }: { onNext: () => void }) => {
                         </div>
 
                         {/* Father's Occupation */}
-                        <div className="flex flex-col">
+                        <div className="flex flex-col xl:col-span-1 col-span-2">
                             <label htmlFor="fatherOccupation" className="mb-2">Father’s Occupation</label>
                             <select
                                 name="fatherOccupation"
@@ -355,7 +410,7 @@ const Step1 = ({ onNext }: { onNext: () => void }) => {
                         </div>
 
                         {/* Father's Mobile */}
-                        <div className="flex flex-col">
+                        <div className="flex flex-col xl:col-span-1 col-span-2">
                             <label htmlFor="fatherMobile" className="mb-2">Father’s Mobile No.</label>
                             <div className="flex items-center border bg-white rounded-lg px-3 py-3 text-sm">
                                 <span className="text-gray-500 pr-2 border-r">+91</span>
@@ -371,7 +426,7 @@ const Step1 = ({ onNext }: { onNext: () => void }) => {
                         </div>
 
                         {/* School */}
-                        <div className="flex flex-col">
+                        <div className="flex flex-col xl:col-span-1 col-span-2">
                             <label htmlFor="school" className="mb-2">Name of your School</label>
                             <input
                                 name="school"

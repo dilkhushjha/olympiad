@@ -11,7 +11,7 @@ const NextChampion = () => {
   return (
     <>
 
-      <section className="p-6 md:p-10 flex flex-col md:flex-row items-center justify-between text-white relative ">
+      <section className="xl:p-6 md:p-6 p-4 flex flex-col md:flex-row items-center justify-between text-white relative ">
         {/* Left Content */}
         <div className="my-4">
           <h1 className="text-2xl md:text-3xl text-white font-bold mb-4">
@@ -27,7 +27,7 @@ const NextChampion = () => {
 
         {/* Right Card */}
         <div>
-          <div className="col w-full flex">
+          <div className="xl:max-w-[450px] max-w-[320px]">
             <RegisterForm studentFeedBack={false} />
           </div>
         </div>

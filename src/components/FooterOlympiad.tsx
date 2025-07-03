@@ -6,10 +6,10 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <>
-      <footer className="bg-[#13488E] py-10 text-white ">
-        <div className="container flex mx-auto items-center justify-between font-light">
-          <div className="flex items-center">
-            <div className="border-r border-Grey-Shade_1 pr-12">
+      <footer className="bg-Secondary-Shade_1 py-10 text-white ">
+        <div className="container flex mx-auto items-center justify-between font-light xl:gap-0 gap-8">
+          <div className="flex items-center xl:flex-row xl:items-center flex-col">
+            <div className="xl:border-r xl:border-b-0  sm:border-b border-Grey-Shade_1 xl:pr-12 xl:pb-0 pb-4">
               <div className="flex gap-4">
                 <Image
                   src={"/images/olympiad/logo-white.png"}
@@ -23,7 +23,7 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="flex flex-col gap-2 pl-12">
+            <div className="flex flex-col gap-2 xl:pl-12 xl:pt-0 pt-6">
               <p className="flex items-center gap-2">
                 <svg
                   width="14"

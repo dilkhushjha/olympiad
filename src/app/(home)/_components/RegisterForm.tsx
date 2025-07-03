@@ -89,7 +89,7 @@ const RegisterForm = (props) => {
             {isSubmitted && step === 2 && (
                 <div className="fixed inset-0 bg-gray-900 bg-opacity-50 rounded-3xl flex justify-center items-center z-50">
                     <div className="bg-white w-max rounded-3xl shadow-lg z-999">
-                        <div className=" px-12 py-10 flex flex-col items-center justify-center rounded-3xl text-center gap-6 relative bg-white">
+                        <div className=" xl:px-12 xl:py-10 px-6 py-5 xl:w-max w-[350px] flex flex-col items-center justify-center rounded-3xl text-center gap-6 relative bg-white">
                             <button
                                 onClick={handleCloseModal}
                                 className="absolute top-4 right-4 text-2xl px-2 rounded text-gray-500 hover:text-red-500"
@@ -109,24 +109,24 @@ const RegisterForm = (props) => {
                                 className="space-y-4 flex flex-col text-black"
                             >
                                 <div className="flex flex-col gap-5">
-                                    <h2 className="text-2xl  text-black">
+                                    <h2 className="xl:text-2xl text-lg  text-black">
                                         Please Enter OTP <br />
                                         Received on{" "}
                                         <strong>&nbsp;{"+91" + formData.mobileNo}</strong>
                                     </h2>
-                                    <div className="flex flex-col gap-2 w-[460px]">
+                                    <div className="flex flex-col gap-2 max-w-[460px]">
                                         <p className="text-sm text-Grey-Shade_1 text-left">
                                             Enter OTP
                                         </p>
-                                        <div className="flex gap-2 text-black">
-                                            <div className="flex basis-1/6">
+                                        <div className="flex xl:gap-2 gap-1 text-black ">
+                                            <div className="flex basis-1/6 text-center">
                                                 <input
                                                     name="otp_1"
                                                     type="text"
                                                     maxLength={1}
                                                     value={otp["otp_1"]}
                                                     onChange={handleOtpValidation}
-                                                    className="border-2 px-6 py-4 font-bold rounded-xl w-[100%]"
+                                                    className="border-2 xl:px-6 xl:py-4 p-2 font-bold rounded-xl w-[100%]"
                                                 ></input>
                                             </div>
                                             <div className="flex basis-1/6">
@@ -136,7 +136,7 @@ const RegisterForm = (props) => {
                                                     maxLength={1}
                                                     value={otp["otp_2"]}
                                                     onChange={handleOtpValidation}
-                                                    className="border-2 px-6 py-4 font-bold rounded-xl w-[100%]"
+                                                    className="border-2 xl:px-6 xl:py-4 p-2  font-bold rounded-xl w-[100%]"
                                                 ></input>
                                             </div>
                                             <div className="flex basis-1/6">
@@ -146,7 +146,7 @@ const RegisterForm = (props) => {
                                                     maxLength={1}
                                                     value={otp["otp_3"]}
                                                     onChange={handleOtpValidation}
-                                                    className="border-2 px-6 py-4 font-bold rounded-xl w-[100%]"
+                                                    className="border-2 xl:px-6 xl:py-4 p-2  font-bold rounded-xl w-[100%]"
                                                 ></input>
                                             </div>
                                             <div className="flex basis-1/6">
@@ -156,7 +156,7 @@ const RegisterForm = (props) => {
                                                     maxLength={1}
                                                     value={otp["otp_4"]}
                                                     onChange={handleOtpValidation}
-                                                    className="border-2 px-6 py-4 font-bold rounded-xl w-[100%]"
+                                                    className="border-2 xl:px-6 xl:py-4 p-2  font-bold rounded-xl w-[100%]"
                                                 ></input>
                                             </div>
                                             <div className="flex basis-1/6">
@@ -166,7 +166,7 @@ const RegisterForm = (props) => {
                                                     maxLength={1}
                                                     value={otp["otp_5"]}
                                                     onChange={handleOtpValidation}
-                                                    className="border-2 px-6 py-4 font-bold rounded-xl w-[100%]"
+                                                    className="border-2 xl:px-6 xl:py-4 p-2  font-bold rounded-xl w-[100%]"
                                                 ></input>
                                             </div>
                                             <div className="flex basis-1/6">
@@ -176,11 +176,11 @@ const RegisterForm = (props) => {
                                                     maxLength={1}
                                                     value={otp["otp_6"]}
                                                     onChange={handleOtpValidation}
-                                                    className="border-2 px-6 py-4 font-bold rounded-xl w-[100%] text-black"
+                                                    className="border-2 xl:px-6 xl:py-4 p-2  font-bold rounded-xl w-[100%] text-black"
                                                 ></input>
                                             </div>
                                         </div>
-                                        <p className="text-sm text-left">
+                                        <p className="text-sm md:text-xs text-left">
                                             You can resend OTP in 30 seconds
                                         </p>
                                     </div>
@@ -189,7 +189,7 @@ const RegisterForm = (props) => {
                                     {!verified && (
                                         <button
                                             type="submit"
-                                            className="w-max flex gap-3 items-center mx-auto bg-Primary-Shade_1 text-white py-3 px-6 rounded-full font-semibold hover:bg-green-700 transition text-lg"
+                                            className="w-max flex gap-3 items-center mx-auto bg-Primary-Shade_1 text-white py-3 px-6 rounded-full font-semibold hover:bg-green-700 transition xl:text-lg text-sm"
                                         >
 
 
@@ -213,7 +213,7 @@ const RegisterForm = (props) => {
                                     {verified && (
                                         <button
                                             type="submit"
-                                            className="w-max flex gap-3 items-center mx-auto bg-Primary-Shade_1 text-white py-3 px-6 rounded-full font-semibold hover:bg-green-700 transition text-lg"
+                                            className="w-max flex gap-3 items-center mx-auto bg-Primary-Shade_1 text-white py-3 px-6 rounded-full font-semibold hover:bg-green-700 transition xl:text-lg text-sm"
                                         >
 
 
@@ -233,7 +233,7 @@ const RegisterForm = (props) => {
             )}
 
             <div className="">
-                <div className="bg-white p-8 rounded-3xl max-w-[480px] flex flex-col gap-4 hover:shadow-lg hover:-translate-y-1  transition-all duration-500 ease-in-out">
+                <div className="bg-white xl:p-8 p-6 rounded-3xl max-w-[480px] flex flex-col gap-4 hover:shadow-lg hover:-translate-y-1  transition-all duration-500 ease-in-out">
                     <div className="flex flex-col gap-4">
                         <h1 className="text-xl font-bold  text-gray-800">Register Now</h1>
                         <div className="flex flex-row gap-4 items-center">

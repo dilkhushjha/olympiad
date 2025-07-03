@@ -2,14 +2,14 @@ import Image from "next/image";
 
 export default function RankBanner() {
   return (
-    <div className="container bg-[url('/images/olympiad/champCard.png')] w-full bg-cover bg-center rounded-3xl ">
+    <div className=" bg-[url('/images/olympiad/champCard.png')] w-full bg-cover bg-center rounded-3xl ">
       <div className="flex flex-col md:flex-row justify-between items-center m-4 md:m-6 py-12 gap-6">
-        <div className="flex flex-col gap-5 p-8">
-          <div className="flex flex-col md:flex-row gap-4 md:w-4/5">
-            <Image src={'/images/olympiad/trophy.png'} height={100} width={100} alt="trophy"></Image>
+        <div className="flex flex-col gap-5 xl:p-8">
+          <div className="flex flex-col md:flex-row xl:gap-4 gap-4 md:w-4/5">
+            <Image className="xl:w-[100%] w-[25%]" src={'/images/olympiad/trophy.png'} height={100} width={100} alt="trophy"></Image>
 
 
-            <h2 className="text-[42px] font-bold">Matrix JEE Champions</h2>
+            <h2 className="xl:text-[42px] text-2xl font-bold">Matrix JEE Champions</h2>
           </div>
           <div className="w-full">
             <p className="text-lg">Give yourself the best chance to succeed</p>
@@ -36,7 +36,7 @@ export default function RankBanner() {
 
 
 
-        <div className="flex flex-wrap justify-center gap-4 m-4 md:m-8">
+        <div className="flex flex justify-center gap-4 mt-2 md:m-8">
           <div className="relative">
             <Image
               src="images/olympiad/air1.png"

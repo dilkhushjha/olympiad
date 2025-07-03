@@ -3,7 +3,7 @@ import React, { useState } from "react";
 
 const faqs = [
   {
-    question: "What is eligible to take these Olympiads?",
+    question: "Who is eligible to take these Olympiads?",
     answer:
       "Any student studying in class 5th to 12th enrolled in any of the CBSE, ICSE or State Boards.",
   },

@@ -29,16 +29,16 @@ const Step2 = ({ onNext, onBack }: { onNext: () => void, onBack: () => void }) =
 
     return (
 
-        <div className="container pb-[20px] min-h-[400px]">
-            <form onSubmit={handleSubmit} className="grid md:grid-cols-2 gap-12 ">
+        <div className=" pb-[20px] min-h-[400px] flex flex-col gap-10">
+            <button type="button" onClick={onBack} className=" flex items-center text-Grey-Shade_1 text-2xl hover:text-black">
+                ←
+            </button>
+            <form onSubmit={handleSubmit} className="flex flex-col xl:flex-row gap-10 justify-between ">
 
                 {/* Left Section - Exam Mode */}
-                <div className='flex flex-col'>
-                    <button type="button" onClick={onBack} className="mb-4 flex items-center text-gray-600 hover:text-black">
-                        <ChevronLeft className="w-5 h-5 mr-1" /> Back
-                    </button>
+                <div className='flex flex-col gap-10 basis-1/2 '>
                     <div className="flex justify-between items-start">
-                        <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
+                        <h2 className="text-2xl md:text-3xl font-bold text-gray-800">
                             Select Your Exam Preferences
                         </h2>
                         <div
@@ -53,8 +53,8 @@ const Step2 = ({ onNext, onBack }: { onNext: () => void, onBack: () => void }) =
                         </div>
                     </div>
 
-                    <div className="mt-6">
-                        <label className="font-semibold text-gray-700 mb-2 block">
+                    <div className="">
+                        <label className="font-semibold text-Grey-Shade_1 mb-2 block">
                             Select Exam Mode
                         </label>
                         <div className="flex gap-4">
@@ -63,9 +63,9 @@ const Step2 = ({ onNext, onBack }: { onNext: () => void, onBack: () => void }) =
                                     type="button"
                                     key={mode}
                                     onClick={() => setExamMode(mode as 'Online' | 'Offline')}
-                                    className={`px-4 py-2 rounded-full border text-sm font-medium flex items-center gap-2 ${examMode === mode
-                                        ? 'bg-green-100 text-green-600 border-green-500'
-                                        : 'bg-white text-gray-600 border-gray-300'
+                                    className={`px-4 py-2 rounded-full border text-sm  flex items-center gap-2 ${examMode === mode
+                                        ? ' text-Primary-Shade_2 border-Primary-Shade_2 font-bold'
+                                        : 'bg-white text-Grey-Shade_1 border-gray-300'
                                         }`}
                                 >
                                     {mode}
@@ -93,16 +93,20 @@ const Step2 = ({ onNext, onBack }: { onNext: () => void, onBack: () => void }) =
                     </div>
                 </div>
 
+
+
+
+
                 {/* Right Section - Exam Details */}
 
                 {examMode === 'Offline' && (
-                    <div className="bg-Primary-Shade_7 rounded-3xl p-10 flex flex-col gap-6">
-                        <h3 className="font-bold text-gray-800 mb-4">
+                    <div className="bg-Primary-Shade_7 rounded-3xl p-10 flex flex-col gap-6  xl:min-w-[500px] hover:shadow-xl">
+                        <h3 className="font-bold text-lg mb-4">
                             Choose your Exam Details
                         </h3>
 
                         <div className="flex flex-col gap-6 text-Grey-Shade_1">
-                            <div className="flex gap-4">
+                            <div className="flex flex-col xl:flex-row gap-4">
                                 <div className='flex flex-col gap-2 col-span-1 basis-1/2'>
 
 
@@ -136,7 +140,7 @@ const Step2 = ({ onNext, onBack }: { onNext: () => void, onBack: () => void }) =
                                 </div>
                             </div>
 
-                            <div className="flex gap-4">
+                            <div className="flex flex-col xl:flex-row gap-4">
 
 
                                 <div className="flex flex-col gap-2 basis-1/2">
@@ -182,7 +186,7 @@ const Step2 = ({ onNext, onBack }: { onNext: () => void, onBack: () => void }) =
 
 
                 {examMode === 'Online' && (
-                    <div className="bg-Primary-Shade_7 rounded-3xl p-10 flex flex-col gap-6 ">
+                    <div className="bg-Primary-Shade_7 rounded-3xl p-10 flex flex-col gap-6 xl:min-w-[500px] hover:shadow-xl">
                         <h3 className="font-bold text-lg mb-4">
                             Choose your Exam Details
                         </h3>
@@ -214,6 +218,7 @@ const Step2 = ({ onNext, onBack }: { onNext: () => void, onBack: () => void }) =
                         </button>
                     </div>
                 )}
+
 
             </form>
 

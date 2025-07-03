@@ -10,6 +10,7 @@ import StageFlow from "./_components/StageFlow";
 import RankBanner from "./_components/RankBanner";
 import TourGallery from "./_components/TourGallery";
 import TestimonialSection from "./_components/TestimonialSection";
+import FadeInSection from "./_components/FadeInSection";
 
 const Olympiad = () => {
     return (
@@ -32,10 +33,10 @@ const Olympiad = () => {
                             </div>
 
                             <div className="flex flex-col gap-4 items-center lg:items-start">
-                                <p className="text-sm sm:text-base lg:text-lg text-white border rounded-2xl px-5 py-2 text-center">
+                                <p className="text-xs sm:text-base lg:text-lg text-white border rounded-2xl px-5 py-2 text-center">
                                     All-India Olympiad (Class 5–12)
                                 </p>
-                                <p className="text-sm sm:text-base lg:text-lg text-white border rounded-2xl px-5 py-2 text-center">
+                                <p className="text-xs sm:text-base lg:text-lg text-white border rounded-2xl px-5 py-2 text-center">
                                     Win up to 100% Scholarships + ₹31L Cash Prizes
                                 </p>
                                 <p className="text-sm sm:text-base lg:text-lg text-white border rounded-2xl px-5 py-2 text-center flex items-center gap-2">
@@ -66,79 +67,88 @@ const Olympiad = () => {
                         />
 
                         {/* Info Box */}
-                        <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-between items-center text-white bg-Secondary-Shade_2 rounded-t-2xl sm:rounded-t-3xl w-[95%] sm:w-[90%] lg:w-[80%] mx-auto py-5 px-6 sm:px-10 relative z-10 text-center sm:text-left text-sm sm:text-base lg:text-lg">
-                            <p className="font-semibold">
+                        <div className="flex flex-col sm:flex-row gap-4 sm:gap-4 justify-between items-center text-white bg-Secondary-Shade_2 rounded-t-2xl sm:rounded-t-3xl w-[95%] sm:w-[90%] lg:w-[80%] mx-auto py-5 px-6  relative z-10  sm:text-left text-sm sm:text-base lg:text-lg ">
+                            <p className="font-semibold xl:basis-1/2 basis-1 ">
                                 Starting from 15 July, 2025 Onwards
                             </p>
-                            <p>Registration Open Now</p>
-                            <button className="bg-white text-black font-semibold px-4 py-2 rounded-full text-xs sm:text-sm lg:text-base whitespace-nowrap">
-                                Register for Free
-                            </button>
+                            <div className="flex  gap-4 xl:basis-1/2 basis-1 items-center justify-between">
+
+                                <p className="text-left text-sm">Registration Open Now</p>
+                                <button className="bg-white text-black font-semibold px-4 py-2 rounded-full xl:text-lg text-sm lg:text-base whitespace-nowrap">
+                                    Register for Free
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
 
             {/* Info */}
-            <section className="container mx-auto flex spacing-xy">
-                <div className="flex gap-6 mx-auto flex-col xl:flex-row text-center">
-                    <div className="rounded-2xl text-left p-6  bg-[url('/images/olympiad/stats.png')] bg-cover bg-center w-[300px]">
-                        <p className="text-2xl font-bold leading-none text-Accent-Orange_1">
-                            1000K+
-                        </p>
-                        <p className="text-sm font-medium">Students Registered</p>
-                    </div>
-                    <div className="rounded-2xl text-left p-6  bg-[url('/images/olympiad/graduate.png')] bg-cover bg-center w-[300px]">
-                        <p className="text-2xl font-bold leading-none text-Accent-Orange_1">
-                            19+
-                        </p>
-                        <p className="text-sm font-medium">Students Benefited</p>
-                    </div>
-                    <div className="rounded-2xl text-left p-6  bg-[url('/images/olympiad/award.png')] bg-cover bg-center w-[300px]">
-                        <p className="text-2xl font-bold leading-none text-Accent-Orange_1">
-                            18+
-                        </p>
-                        <p className="text-sm font-medium">National Awards</p>
-                    </div>
-                </div>
-            </section>
 
-            {/* Why MOF Section */}
-            <section className="bg-[#F6F9FE] py-12  ">
-                <div className="container mx-auto">
-                    <div className="flex flex-col gap-8 mx-auto ">
-                        <WhyMof />
+            <FadeInSection>
+                <section className="container mx-auto flex spacing-xy">
+                    <div className="flex gap-6 mx-auto flex-col xl:flex-row text-center">
+                        <div className="rounded-2xl text-left p-8  bg-[url('/images/olympiad/stats.png')] bg-cover bg-center w-[320px]">
+                            <p className="text-2xl font-bold leading-none text-Accent-Orange_1">
+                                1000K+
+                            </p>
+                            <p className="text-sm font-medium">Students Registered</p>
+                        </div>
+                        <div className="rounded-2xl text-left p-8  bg-[url('/images/olympiad/graduate.png')] bg-cover bg-center w-[320px]">
+                            <p className="text-2xl font-bold leading-none text-Accent-Orange_1">
+                                19+
+                            </p>
+                            <p className="text-sm font-medium">Students Benefited</p>
+                        </div>
+                        <div className="rounded-2xl text-left p-8  bg-[url('/images/olympiad/award.png')] bg-cover bg-center w-[320px]">
+                            <p className="text-2xl font-bold leading-none text-Accent-Orange_1">
+                                18+
+                            </p>
+                            <p className="text-sm font-medium">National Awards</p>
+                        </div>
+                    </div>
+                </section>
 
-                        <button
-                            type="submit"
-                            className="btn-secondary w-max text-white rounded-full  mx-auto flex gap-3 items-center text-lg"
-                        >
-                            <p>Start Today</p>
-                            <svg
-                                width="7"
-                                height="12"
-                                viewBox="0 0 7 12"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
+                {/* Why MOF Section */}
+            </FadeInSection>
+            <FadeInSection>
+
+                <section className="bg-[#F6F9FE] py-12  ">
+                    <div className="container mx-auto">
+                        <div className="flex flex-col gap-8 mx-auto ">
+                            <WhyMof />
+
+                            <button
+                                type="submit"
+                                className="btn-secondary w-max text-white rounded-full  mx-auto flex gap-3 items-center text-lg"
                             >
-                                <path
-                                    d="M1 10.5L5.5 6L1 1.5"
-                                    stroke="white"
-                                    strokeWidth="1.5"
-                                    strokeLinecap="round"
-                                />
-                            </svg>
-                        </button>
+                                <p>Start Today</p>
+                                <svg
+                                    width="7"
+                                    height="12"
+                                    viewBox="0 0 7 12"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M1 10.5L5.5 6L1 1.5"
+                                        stroke="white"
+                                        strokeWidth="1.5"
+                                        strokeLinecap="round"
+                                    />
+                                </svg>
+                            </button>
+                        </div>
                     </div>
-                </div>
-            </section>
+                </section>
+            </FadeInSection>
 
             {/* About MOF */}
 
             <section id="about" className="spacing-xy">
                 <div className="container mx-auto">
-                    <div className="flex flex-col gap-10">
-                        <div className="flex gap-[100] xl:flex-row flex-col justify-between items-center">
+                    <div className="flex flex-col xl:gap-10 md:gap-6 gap-8">
+                        <div className="flex xl:gap-[100px] gap-10 xl:flex-row flex-col justify-between items-center">
                             <div className="xl:basis-2/5 basis-1">
                                 <Image
                                     src={"/images/olympiad/about.png"}
@@ -157,7 +167,7 @@ const Olympiad = () => {
                                         students
                                     </h2>
                                 </div>
-                                <p className="text-lg text-justify text-Grey-Shade_1">
+                                <p className="text-lg font-light text-Grey-Shade_1">
                                     Matrix Olympiad Foundation (MOF) helps students prepare for
                                     JEE, NEET, CLAT, NDA, and more at Matrix Academy and Matrix
                                     High School with attractive scholarships. Over the past 7
@@ -167,7 +177,7 @@ const Olympiad = () => {
                             </div>
                         </div>
 
-                        <div className="flex flex-col xl:flex-row x gap-10 mx-auto text-center">
+                        <div className="flex flex-col xl:flex-row xl:gap-10 gap-6 mx-auto text-center">
                             <div className="rounded-2xl text-center p-6  bg-[url('/images/olympiad/about-card-bg.png')] bg-cover bg-center w-[350px]">
                                 <div className="flex flex-col gap-6">
                                     <Image
@@ -223,16 +233,38 @@ const Olympiad = () => {
                                 </div>
                             </div>
                         </div>
+
+
+                        <button
+                            type="submit"
+                            className="btn-secondary w-max text-white rounded-full  mx-auto flex gap-3 items-center text-lg"
+                        >
+                            <p>Start Today</p>
+                            <svg
+                                width="7"
+                                height="12"
+                                viewBox="0 0 7 12"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M1 10.5L5.5 6L1 1.5"
+                                    stroke="white"
+                                    strokeWidth="1.5"
+                                    strokeLinecap="round"
+                                />
+                            </svg>
+                        </button>
                     </div>
                 </div>
             </section>
 
             {/* Important Dates */}
-            <section className="pb-[120px]">
+            <section className="spacing-b">
                 <div className="container mx-auto">
-                    <div className=" flex flex-col  xl:gap-[80px]">
+                    <div className=" flex flex-col  xl:gap-[80px] gap-[60px]">
                         <div className="flex flex-col gap-3 text-center">
-                            <p className="text-xl text-Secondary-Shade_2 font-semibold">
+                            <p className="xl:text-xl text-lg text-Secondary-Shade_2 font-semibold">
                                 Exam Dates & Phases
                             </p>
                             <h2 className="text-2xl xl:text-3xl md:text-2xl font-bold">
@@ -240,7 +272,7 @@ const Olympiad = () => {
                             </h2>
                         </div>
 
-                        <div className="flex gap-10 flex-col xl:flex-row mx-auto text-center">
+                        <div className="flex xl:gap-10 gap-12 flex-col xl:flex-row mx-auto text-center">
                             <div className="rounded-2xl text-center p-6   bg-cover bg-center border-2 w-[350px]">
                                 <p className="text-left px-11 py-2 bg-Secondary-Shade_2 text-white w-max rounded-xl font-bold text-xl my-[-60px] absolute">
                                     Phase 1
@@ -315,49 +347,49 @@ const Olympiad = () => {
 
             {/* Exam Process */}
 
-            <section className="spacing-xy bg-Secondary-Shade_2" id="process">
-                <div className="container flex flex-col gap-10 mx-auto">
+            <section className="spacing-xy bg-Secondary-Shade_2 " id="process">
+                <div className=" flex flex-col gap-10 mx-auto container ">
                     <div className="flex flex-col gap-3 text-center">
-                        <p className="text-xl text-Accent-Yellow_2 font-semibold">
+                        <p className="xl:text-xl text-lg text-Accent-Yellow_2 font-semibold">
                             Exam Process
                         </p>
-                        <h2 className="text-2xl text-white xl:text-3xl md:text-2xl font-bold">
-                            Our Exam Conducting <br /> Process is Simple
+                        <h2 className="text-[30px] text-white xl:text-3xl md:text-2xl font-bold">
+                            Our Exam <br /> Conducting Process is Simple
                         </h2>
                     </div>
 
-                    <div className="">
+                    <div className="overflow-x-scroll no-scrollbar">
                         <StageFlow />
                     </div>
                 </div>
             </section>
 
-            <div className="spacing-xy">
+            <section className="spacing-xy container">
                 <RankBanner />
-            </div>
+            </section>
 
-            <div id="rewards">
+            <section id="rewards">
                 <RewardsAndRecognition />
-            </div>
+            </section>
 
-            <div>
+            <section>
                 <TourGallery />
-            </div>
+            </section>
 
-            <div id="testimonials" className="bg-Primary-Shade_7">
+            <section id="testimonials" className="bg-Primary-Shade_7">
                 <TestimonialSection />
                 <ReviewCard />
-            </div>
+            </section>
 
-            <div id="faqs">
+            <section id="faqs">
                 <FaqSection />
-            </div>
+            </section>
 
-            <div className="spacing-xy">
+            <section className="spacing-xy container">
                 <div className="container bg-[url('/images/olympiad/BGChampion.png')] bg-center bg-cover rounded-3xl">
                     <NextChampion />
                 </div>
-            </div>
+            </section>
         </>
     );
 };

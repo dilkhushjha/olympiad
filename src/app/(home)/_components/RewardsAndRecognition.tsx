@@ -10,7 +10,7 @@ export default function RewardsAndRecognition() {
           <h3 className="text-Secondary-Shade_2 text-[20px] font-semibold mb-2">
             Rewards & Recognition
           </h3>
-          <h2 className="text-3xl font-bold flex text-center">
+          <h2 className="text-2xl xl:text-3xl font-bold flex text-center">
             Key Benefits for Students <br /> & Parents
           </h2>
         </div>
@@ -19,7 +19,7 @@ export default function RewardsAndRecognition() {
             <div className="bg-[url('/images/olympiad/bggrid1.png')] bg-contain bg-no-repeat justify-center bg-center flex flex-col items-center p-4 w-[376px] h-[376px]">
               <Image
                 src="images/olympiad/grid1.png"
-                className=""
+                className="hidden xl:block"
                 alt="grad1"
                 width={120}
                 height={140}
@@ -40,7 +40,7 @@ export default function RewardsAndRecognition() {
             <div className="bg-[url('/images/olympiad/bggrid2.png')] bg-contain justify-center bg-no-repeat bg-center flex flex-col items-center p-4 w-[376px] h-[376px]">
               <Image
                 src="images/olympiad/grid2.png"
-                className=""
+                className="hidden xl:block"
                 alt="grad1"
                 width={140}
                 height={140}
@@ -62,7 +62,7 @@ export default function RewardsAndRecognition() {
             <div className="bg-[url('/images/olympiad/bggrid3.png')] bg-contain bg-no-repeat bg-center flex flex-col items-center p-4 w-[376px] h-[376px]">
               <Image
                 src="images/olympiad/grid3.png"
-                className="m-2"
+                className="m-2 hidden xl:block"
                 alt="grad1"
                 width={115}
                 height={140}
@@ -79,7 +79,7 @@ export default function RewardsAndRecognition() {
             <div className="bg-[url('/images/olympiad/bggrid4.png')] bg-contain bg-no-repeat bg-center flex flex-col items-center p-4 w-[376px] h-[376px]">
               <Image
                 src="images/olympiad/grid4.png"
-                className=""
+                className="hidden xl:block"
                 alt="grad1"
                 width={140}
                 height={130}
@@ -100,7 +100,7 @@ export default function RewardsAndRecognition() {
             <div className="bg-[url('/images/olympiad/bggrid5.png')] bg-contain bg-no-repeat bg-center flex flex-col justify-center items-center p-4 w-[376px] h-[376px]">
               <Image
                 src="images/olympiad/grid5.png"
-                className="m-2"
+                className="m-2 hidden xl:block"
                 alt="grad1"
                 width={80}
                 height={100}
