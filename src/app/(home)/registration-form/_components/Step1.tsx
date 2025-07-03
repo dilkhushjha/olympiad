@@ -6,7 +6,7 @@ const classes = ['5th', '6th', '7th', '8th', '9th', '10th', '11th', '12th'];
 const subjects = ['Arts', 'Maths', 'Bio', 'Commerce'];
 const boards = ['CBSE', 'ICSE', 'RBSE', 'Bihar', 'UP', 'Punjab', 'MP', 'Haryana', 'J&K'];
 const goals = ['Engineering', 'Medical', 'Civil Services', 'Commerce', 'Others'];
-const errors = ['']
+
 
 
 const Step1 = ({ onNext }: { onNext: () => void }) => {
@@ -267,7 +267,7 @@ const Step1 = ({ onNext }: { onNext: () => void }) => {
                                     ))}
 
                                 </div>
-                                  {error === 'goal' && (
+                                {error === 'goal' && (
                                     <p className="text-red-500 text-xs py-2">
                                         Please select your goal.
                                     </p>
@@ -309,7 +309,7 @@ const Step1 = ({ onNext }: { onNext: () => void }) => {
                                 placeholder="Enter Full Name"
                                 onChange={handleChange}
                                 className="border px-4 py-3 rounded-lg text-sm"
-                                
+
                             />
                         </div>
 
@@ -322,7 +322,7 @@ const Step1 = ({ onNext }: { onNext: () => void }) => {
                                 placeholder="E.g, Rahul@gmail.com"
                                 onChange={handleChange}
                                 className="border px-4 py-3 rounded-lg text-sm"
-                                
+
                             />
                         </div>
 
