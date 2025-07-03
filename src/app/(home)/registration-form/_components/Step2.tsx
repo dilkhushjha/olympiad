@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 
-import { ChevronLeft } from 'lucide-react';
 
 
 const Step2 = ({ onNext, onBack }: { onNext: () => void, onBack: () => void }) => {
